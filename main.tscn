@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://dyrlduw63opra"]
+
+[ext_resource type="PackedScene" uid="uid://dsg2y4i3584ua" path="res://scene/Player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bh7w8v577cly0" path="res://scene/camera_rig.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://b4alnyj007jv4" path="res://scripts/player.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://b1aq20l1d1ftk" path="res://scripts/camera_rig.gd" id="4_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://b518nilo4io3v" path="res://Assets/Music/sfx/jump..ogg" id="5_kek77"]
+[ext_resource type="PackedScene" uid="uid://d0r2ghibywle6" path="res://scene/Obstacle_Base.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bh8fyuc5iohmx" path="res://scene/Obstacle_kasih_jalan.tscn" id="7_5vw27"]
+[ext_resource type="Script" uid="uid://c222wv16rqmvo" path="res://scripts/obstacle_kasih_jalan.gd" id="8_kek77"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
+albedo_color = Color(0, 0.61565197, 0.5828061, 1)
+
+[sub_resource type="Environment" id="Environment_ig7tw"]
+background_mode = 1
+background_color = Color(0.43476555, 0.5112999, 0.9320936, 1)
+ambient_light_color = Color(0.9682787, 0.53369856, 0.5930169, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
+size = Vector3(8, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
+size = Vector3(8.123276, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
+size = Vector3(10.855347, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+albedo_color = Color(0.7626621, 8.143723e-05, 0.6211426, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4c57u"]
+size = Vector3(10.92, 1, 1)
+
+[node name="Main" type="Node3D" unique_id=435557819]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=35198490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.460217, -0.2640075, 0.08325195)
+material_override = SubResource("StandardMaterial3D_0xm2m")
+use_collision = true
+size = Vector3(30.619837, 1, 1.6572266)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=182272353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.460217, -0.2640075, -23.259115)
+material_override = SubResource("StandardMaterial3D_0xm2m")
+use_collision = true
+size = Vector3(30.619837, 1, 1.6572266)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=982760923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.134773, -0.2640075, 0.08325195)
+material_override = SubResource("StandardMaterial3D_0xm2m")
+use_collision = true
+size = Vector3(12.158744, 1, 1.6572266)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1652466818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.023064, -0.2640075, 0.08325195)
+material_override = SubResource("StandardMaterial3D_0xm2m")
+use_collision = true
+size = Vector3(9.573844, 1, 1.6572266)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=556809220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.261341, 3.2963157, 0.08325195)
+material_override = SubResource("StandardMaterial3D_1bvp3")
+size = Vector3(0.865839, 1, 1.6572266)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=2060242805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.964157, 4.512329, 0.08325195)
+material_override = SubResource("StandardMaterial3D_1bvp3")
+use_collision = true
+size = Vector3(0.865839, 1, 1.6572266)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=243508423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.677227, 5.5200405, 0.08325195)
+material_override = SubResource("StandardMaterial3D_1bvp3")
+use_collision = true
+size = Vector3(0.865839, 1, 1.6572266)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=528281244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.50935, 12.457256, 0.08325195)
+material_override = SubResource("StandardMaterial3D_1bvp3")
+use_collision = true
+size = Vector3(0.865839, 10.387573, 1.6572266)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1593985146]
+transform = Transform3D(0.3099708, 0.95071477, -0.00771707, 0.015969843, 0.0029092513, 0.9998683, 0.95061195, -0.31005317, -0.014280983, 0, 34.17495, 0)
+light_color = Color(0.85777944, 0.6229488, 0.61109245, 1)
+light_energy = 2.109
+
+[node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("1_ig7tw")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00307858, 0, -0.0688926)
+script = ExtResource("2_h2yge")
+
+[node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
+stream = ExtResource("5_kek77")
+volume_db = -10.0
+
+[node name="CameraRig" parent="Player" unique_id=1786440836 node_paths=PackedStringArray("player") instance=ExtResource("2_0xm2m")]
+transform = Transform3D(0.9994862, 0, -0.0320561, 0, 1, 0, 0.0320561, 0, 0.9994862, 0.02135244, 5.2452087e-06, 10.649474)
+script = ExtResource("4_1bvp3")
+player = NodePath("..")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1781430363]
+environment = SubResource("Environment_ig7tw")
+
+[node name="Obstacle_Base" parent="." unique_id=1114171317 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.330399, 0.42332983, 0)
+
+[node name="Obstacle_Base2" parent="." unique_id=2114639041 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.95827, 0.42921162, 0.26689363)
+
+[node name="CollisionShape3D" parent="Obstacle_Base2/ObstacleHitbox" parent_id_path=PackedInt32Array(2114639041, 1393558703) index="0" unique_id=464020481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5915413, -2.9914026, -0.14335561)
+
+[node name="CollisionShape3D" parent="Obstacle_Base2/StaticBody3D" parent_id_path=PackedInt32Array(2114639041, 1288428675) index="0" unique_id=1117011116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4017334, -3.3280478, -0.17864025)
+
+[node name="CSGBox3D" parent="Obstacle_Base2/StaticBody3D" parent_id_path=PackedInt32Array(2114639041, 1288428675) index="1" unique_id=1443130602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.906456, -3.3667111, -0.23432076)
+use_collision = true
+size = Vector3(5.2252197, 1, 1)
+
+[node name="SlowmoArea" parent="Obstacle_Base2" index="2" unique_id=676845770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0512085, 0.47901487, 0)
+
+[node name="TypingPrompt" parent="Obstacle_Base2" index="3" unique_id=94770377]
+target_phrase = "BUKA CELANA"
+
+[node name="Obstacle_kasih_jalan" parent="." unique_id=532910985 instance=ExtResource("7_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.16767, 0.5250759, 0.42309284)
+script = ExtResource("8_kek77")
+platform_speed = 13.0
+
+[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/ObstacleHitbox" parent_id_path=PackedInt32Array(532910985, 1393558703) index="0" unique_id=464020481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.304161, -3.0918374, 0)
+
+[node name="StaticBody3D" parent="Obstacle_kasih_jalan" index="1" unique_id=1288428675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5603466, -2.9924374, 0)
+
+[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="0" unique_id=1117011116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5418243, 0.3207221, 0)
+
+[node name="CSGBox3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="1" unique_id=1443130602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.557274, 0.35950923, 0)
+size = Vector3(12.526855, 1, 1)
+
+[node name="TypingPrompt" parent="Obstacle_kasih_jalan" index="3" unique_id=94770377]
+target_phrase = "JALAND"
+
+[node name="PlatformTarget" type="Marker3D" parent="Obstacle_kasih_jalan" unique_id=1912831893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6916122, -0.6853386, 0)
+
+[node name="Platform1" type="StaticBody3D" parent="Obstacle_kasih_jalan" unique_id=33894597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5408707, 0.31761754, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle_kasih_jalan/Platform1" unique_id=1597351853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3996658, -4.879615, 0)
+mesh = SubResource("BoxMesh_5vw27")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform1" unique_id=1630058696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4322433, -4.8160343, 0)
+shape = SubResource("BoxShape3D_kek77")
+
+[node name="PlatformTarget13" type="Node3D" parent="Obstacle_kasih_jalan" unique_id=133952520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.836624, 1.8320823, 0)
+
+[node name="Platform" type="CharacterBody3D" parent="Obstacle_kasih_jalan" unique_id=788766471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.353595, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1330219848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.248512, 0, 0)
+shape = SubResource("BoxShape3D_5vw27")
+debug_color = Color(0, 0, 0, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1978854187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.275066, 0, 0)
+material_override = SubResource("StandardMaterial3D_kek77")
+mesh = SubResource("BoxMesh_4c57u")
+
+[editable path="Obstacle_Base"]
+[editable path="Obstacle_Base2"]
+[editable path="Obstacle_kasih_jalan"]
