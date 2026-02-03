@@ -5,10 +5,13 @@ extends Label3D
 
 @onready var music: AudioStreamPlayer = $AudioStreamPlayer
 
+var already_finished := false
 
 var typed_text := ""
 var is_typing := false
 var prompt_text := ""
+
+
 
 
 
@@ -54,6 +57,7 @@ func start_typing():
 
 func enter_typing_mode():
 	is_typing = true
+	already_finished = false
 	typed_text = ""
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	text = prompt_text
@@ -79,26 +83,12 @@ func exit_typing_mode():
 
 
 func _input(event):
-	if not is_typing:
+	if not is_typing or already_finished:
 		return
 
 	if event is InputEventKey and event.pressed and not event.echo:
 
 		if event.keycode == KEY_ESCAPE:
-			exit_typing_mode()
-			return
-
-		if event.keycode == KEY_ENTER:
-			print("Typed:", typed_text)
-
-			var success := typed_text == target_phrase
-			typing_finished.emit(success)
-
-			if success:
-				var player := get_tree().get_first_node_in_group("player")
-				if player:
-					player.force_jump()
-
 			exit_typing_mode()
 			return
 
@@ -110,6 +100,20 @@ func _input(event):
 			typed_text += char(event.unicode)
 
 		text = prompt_text + typed_text
+
+
+		if typed_text == target_phrase:
+			already_finished = true
+			print("AUTO SUCCESS:", typed_text)
+
+			typing_finished.emit(true)
+
+			var player := get_tree().get_first_node_in_group("player")
+			if player:
+				player.force_jump()
+
+			exit_typing_mode()
+
 
 
 func _on_timeout():
