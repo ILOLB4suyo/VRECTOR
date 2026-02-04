@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://3vaf0vk5yp7m" path="res://scripts/SlowmoArea.gd" id="2_mu047"]
 [ext_resource type="Script" uid="uid://dghdios0khkar" path="res://scripts/typing_prompt.gd" id="3_3kliw"]
 [ext_resource type="AudioStream" uid="uid://cf1kw8b7vq051" path="res://Assets/Music/sfx/bgm_almost_timeup!.ogg" id="4_jcy6n"]
+[ext_resource type="AudioStream" uid="uid://b518nilo4io3v" path="res://Assets/Music/sfx/jump..ogg" id="5_3kliw"]
 [ext_resource type="AudioStream" uid="uid://bdhgc53ceab4o" path="res://Assets/Music/sfx/fail.ogg" id="5_dyufj"]
+[ext_resource type="AudioStream" uid="uid://ckv8sgw2ccsdu" path="res://Assets/Music/sfx/achieve_goal.ogg" id="5_mu047"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
 size = Vector3(12.559809, 1, 1)
@@ -72,9 +74,16 @@ debug_color = Color(0.9144183, 8.8560584e-05, 0.71814275, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0025787354, -0.98225737, 0)
 size = Vector3(3.2754822, 0.16894531, 1)
 
+[node name="AchieveSFX1" type="AudioStreamPlayer" parent="TypingPrompt" unique_id=852373413]
+stream = ExtResource("5_mu047")
+
 [node name="TypingTimer" type="Timer" parent="TypingPrompt" unique_id=1883947583]
 wait_time = 5.0
 one_shot = true
+
+[node name="AchieveSFX" type="AudioStreamPlayer3D" parent="TypingPrompt" unique_id=1807281338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21927452, -4.1092124, 0)
+stream = ExtResource("5_3kliw")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TypingPrompt" unique_id=714568950]
 stream = ExtResource("4_jcy6n")

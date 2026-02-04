@@ -3,6 +3,8 @@ extends Label3D
 @export var target_phrase := "BUKA JALAN"
 @export var time_limit := 4.0
 
+@onready var achieve_sfx: AudioStreamPlayer3D = $AchieveSFX
+
 @onready var music: AudioStreamPlayer = $AudioStreamPlayer
 
 var already_finished := false
@@ -21,10 +23,12 @@ var time_left := 0.0
 
 
 
+
 signal typing_finished(success: bool)
 signal typing_failed
 
 func _ready():
+	print("AchieveSFX:", achieve_sfx)
 	prompt_text = 'ketik:\n"' + target_phrase + '"\n'
 	text = prompt_text
 	
@@ -52,6 +56,11 @@ func start_typing():
 	
 	if music and not music.playing:
 		music.play()
+		achieve_sfx.play()
+		print("SFX playing:", achieve_sfx.playing)
+
+
+
 
 
 
@@ -79,6 +88,7 @@ func exit_typing_mode():
 	var player := get_tree().get_first_node_in_group("player")
 	if player:
 		player.can_move = true
+		achieve_sfx.play()
 	
 
 
@@ -103,16 +113,19 @@ func _input(event):
 
 
 		if typed_text == target_phrase:
+			
+			
+				
 			already_finished = true
 			print("AUTO SUCCESS:", typed_text)
 
+			
+
 			typing_finished.emit(true)
+			exit_typing_mode()	
+			achieve_sfx.play()
+		
 
-			var player := get_tree().get_first_node_in_group("player")
-			if player:
-				player.force_jump()
-
-			exit_typing_mode()
 
 
 
@@ -153,6 +166,7 @@ func on_correct_phrase():
 	modulate = Color.GREEN
 	print("BENAR:", typed_text)
 	#spawn_floor()
+	achieve_sfx.play()
 	
 	reset_prompt()
 

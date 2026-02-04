@@ -11,6 +11,7 @@ extends Node3D
 
 @export var smooth_speed := 10.0
 
+
 var slowmo_active := false
 
 

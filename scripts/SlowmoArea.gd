@@ -28,25 +28,14 @@ func _on_body_entered(body):
 
 
 func _on_typing_finished(success: bool):
-	# Kembalikan waktu ke normal
 	Engine.time_scale = 1.0
 	slowmo_active = false
 
-	# Matikan efek kamera slowmo
 	var player := get_tree().get_first_node_in_group("player")
 	if player:
 		var camera_rig := player.get_node_or_null("CameraRig")
 		if camera_rig:
 			camera_rig.slowmo_active = false
-	
-	if success:
-		print("SUCCESS → obstacle clear")
-		player.do_jump()
-		#get_parent().queue_free() # obstacle hilang
-	else:
-		print("FAIL → kena obstacle")
-		# obstacle tetap ada → player akan mati kena hitbox
 
-	# Putuskan signal supaya tidak double trigger
 	if typing_prompt.typing_finished.is_connected(_on_typing_finished):
 		typing_prompt.typing_finished.disconnect(_on_typing_finished)

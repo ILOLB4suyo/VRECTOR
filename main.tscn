@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d0r2ghibywle6" path="res://scene/Obstacle_Base.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bh8fyuc5iohmx" path="res://scene/Obstacle_kasih_jalan.tscn" id="7_5vw27"]
 [ext_resource type="Script" uid="uid://c222wv16rqmvo" path="res://scripts/obstacle_kasih_jalan.gd" id="8_kek77"]
+[ext_resource type="AudioStream" uid="uid://ckv8sgw2ccsdu" path="res://Assets/Music/sfx/achieve_goal.ogg" id="9_kek77"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
@@ -103,11 +104,19 @@ transform = Transform3D(0.9994862, 0, -0.0320561, 0, 1, 0, 0.0320561, 0, 0.99948
 script = ExtResource("4_1bvp3")
 player = NodePath("..")
 
+[node name="AudioListener3D" type="AudioListener3D" parent="Player" unique_id=565584918]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1781430363]
 environment = SubResource("Environment_ig7tw")
 
 [node name="Obstacle_Base" parent="." unique_id=1114171317 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.330399, 0.42332983, 0)
+
+[node name="AchieveSFX" parent="Obstacle_Base/TypingPrompt" parent_id_path=PackedInt32Array(1114171317, 94770377) index="3" unique_id=1807281338]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.262989, -2.482874, -0.3268199)
+attenuation_model = 1
+volume_db = 80.0
 
 [node name="Obstacle_Base2" parent="." unique_id=2114639041 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.95827, 0.42921162, 0.26689363)
@@ -149,6 +158,9 @@ size = Vector3(12.526855, 1, 1)
 
 [node name="TypingPrompt" parent="Obstacle_kasih_jalan" index="3" unique_id=94770377]
 target_phrase = "JALAND"
+
+[node name="AchieveSFX" parent="Obstacle_kasih_jalan/TypingPrompt" index="3" unique_id=1807281338]
+stream = ExtResource("9_kek77")
 
 [node name="PlatformTarget" type="Marker3D" parent="Obstacle_kasih_jalan" unique_id=1912831893]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6916122, -0.6853386, 0)
