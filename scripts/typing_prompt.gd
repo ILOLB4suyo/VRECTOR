@@ -3,6 +3,8 @@ extends Label3D
 @export var target_phrase := "BUKA JALAN"
 @export var time_limit := 4.0
 
+@export var valid_phrases := ["JUMP", "SPEEDBOOST"]
+
 @onready var achieve_sfx: AudioStreamPlayer = $AchieveSFX
 
 @onready var music: AudioStreamPlayer = $AudioStreamPlayer
@@ -93,6 +95,9 @@ func exit_typing_mode():
 
 
 func _input(event):
+	if typed_text in valid_phrases:
+		typing_finished.emit(true)
+	
 	if not is_typing or already_finished:
 		return
 

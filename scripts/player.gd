@@ -11,9 +11,13 @@ var can_move := true
 
 func force_jump():
 	velocity.y = jump_velocity
+
+func force_jump_extra(multiplier: float = 1.5):
+	velocity.y = jump_velocity * multiplier
+
 	if jump_sfx:
 		jump_sfx.play()
-	
+
 
 func do_jump():
 	if is_on_floor():
@@ -44,3 +48,10 @@ func _physics_process(delta: float) -> void:
 	
 
 	move_and_slide()
+
+func apply_speed_boost(multiplier: float, duration: float):
+	run_speed *= multiplier
+
+	await get_tree().create_timer(duration).timeout
+
+	run_speed /= multiplier
