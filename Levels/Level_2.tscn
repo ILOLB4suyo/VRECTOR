@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="10_e3avg"]
 [ext_resource type="Script" path="res://scripts/CameraStopArea.gd" id="11_0rx21"]
 [ext_resource type="PackedScene" uid="uid://bodm4be6gci63" path="res://scene/obstacle_panjat_tali.tscn" id="12_i12my"]
+[ext_resource type="Texture2D" uid="uid://drpahn7imv30x" path="res://scene/backgroundgame.jpg" id="13_xhmcf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
@@ -218,28 +219,21 @@ platform_speed = 13.0
 
 [node name="CollisionShape3D" parent="Obstacle_kasih_jalan/ObstacleHitbox" parent_id_path=PackedInt32Array(532910985, 1393558703) index="0" unique_id=464020481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.304161, -3.0918374, 0)
-shape = SubResource("BoxShape3D_5vw27")
 
 [node name="StaticBody3D" parent="Obstacle_kasih_jalan" index="1" unique_id=1288428675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5603466, -2.9924374, 0)
 
 [node name="CollisionShape3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="0" unique_id=1117011116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5418243, 0.3207221, 0)
-shape = SubResource("BoxShape3D_4c57u")
 
 [node name="CSGBox3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="1" unique_id=1443130602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.557274, 0.35950923, 0)
 size = Vector3(12.526855, 1, 1)
-material = SubResource("StandardMaterial3D_kek77")
-
-[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/SlowmoArea" parent_id_path=PackedInt32Array(532910985, 676845770) index="0" unique_id=692299938]
-shape = SubResource("BoxShape3D_kek77")
 
 [node name="TypingPrompt" parent="Obstacle_kasih_jalan" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
 target_phrase = "JALAND"
-
-[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(532910985, 1789275130) index="0" unique_id=569269197]
-shape = SubResource("BoxShape3D_272bh")
 
 [node name="AchieveSFX" parent="Obstacle_kasih_jalan/TypingPrompt" index="1" unique_id=852373413]
 volume_db = 0.0
@@ -289,6 +283,10 @@ material = SubResource("StandardMaterial3D_kek77")
 [node name="CollisionShape3D" parent="Obstacle_Base3/SlowmoArea" parent_id_path=PackedInt32Array(1102102696, 676845770) index="0" unique_id=692299938]
 shape = SubResource("BoxShape3D_kek77")
 
+[node name="TypingPrompt" parent="Obstacle_Base3" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
+
 [node name="CollisionShape3D" parent="Obstacle_Base3/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1102102696, 1789275130) index="0" unique_id=569269197]
 shape = SubResource("BoxShape3D_272bh")
 
@@ -302,23 +300,35 @@ shape = SubResource("BoxShape3D_ycdy4")
 debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="." unique_id=1797953491]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.06904, 7.4249268, -0.10351515)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.60304, 7.4249268, -0.10351515)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
 size = Vector3(9.251427, 1, 3.2885742)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=253519360]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.38788, 4.1952214, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.92188, 4.1952214, 0)
 use_collision = true
 radius = 0.16015625
 height = 6.9848633
 
 [node name="Obstacle_Base4" parent="." unique_id=1214855806 instance=ExtResource("12_i12my")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.569725, 1.6101589, -0.12394619)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.98591, 1.6101589, -0.12394619)
 climb_height = 8
 climb_duration = 2
+
+[node name="SlowmoArea" parent="Obstacle_Base4" index="2" unique_id=676845770]
+transform = Transform3D(0.99941075, 0.034323882, 0, -0.034323882, 0.99941075, 0, 0, 0, 1, 2.6841965, 0.47901487, 0)
+
+[node name="TypingPrompt" parent="Obstacle_Base4" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12909698, 2.6774487, 0)
+modulate = Color(1, 1, 1, 1)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=892572550]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 69.207695, 13.020451, -43.788498)
+texture = ExtResource("13_xhmcf")
 
 [editable path="Obstacle_Base"]
 [editable path="Obstacle_Base2"]
 [editable path="Obstacle_kasih_jalan"]
 [editable path="Obstacle_Base3"]
+[editable path="Obstacle_Base4"]

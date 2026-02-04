@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="10_4c57u"]
 [ext_resource type="Script" path="res://scripts/CameraStopArea.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://bwdjrogetrqul" path="res://LevelEndArea.gd" id="12_dg77c"]
+[ext_resource type="Texture2D" uid="uid://drpahn7imv30x" path="res://scene/backgroundgame.jpg" id="14_w48qg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
@@ -57,6 +58,8 @@ albedo_color = Color(0.7626621, 8.143723e-05, 0.6211426, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4c57u"]
 size = Vector3(10.92, 1, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_w48qg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycdy4"]
 size = Vector3(1.7355347, 3.5062256, 1.4462891)
@@ -147,7 +150,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("1_ig7tw")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.75487, 0, -0.0688926)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.934597, 0, -0.0688926)
 script = ExtResource("2_h2yge")
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
@@ -243,6 +246,8 @@ material = SubResource("StandardMaterial3D_kek77")
 shape = SubResource("BoxShape3D_kek77")
 
 [node name="TypingPrompt" parent="Obstacle_kasih_jalan" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
 target_phrase = "JALAND"
 
 [node name="CollisionShape3D" parent="Obstacle_kasih_jalan/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(532910985, 1789275130) index="0" unique_id=569269197]
@@ -296,6 +301,12 @@ material = SubResource("StandardMaterial3D_kek77")
 [node name="CollisionShape3D" parent="Obstacle_Base3/SlowmoArea" parent_id_path=PackedInt32Array(1102102696, 676845770) index="0" unique_id=692299938]
 shape = SubResource("BoxShape3D_kek77")
 
+[node name="TypingPrompt" parent="Obstacle_Base3" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
+font = SubResource("FontVariation_w48qg")
+outline_size = 50
+
 [node name="CollisionShape3D" parent="Obstacle_Base3/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1102102696, 1789275130) index="0" unique_id=569269197]
 shape = SubResource("BoxShape3D_272bh")
 
@@ -316,6 +327,10 @@ script = ExtResource("12_dg77c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14697266, 1.4590454, 0.2939453)
 shape = SubResource("BoxShape3D_w48qg")
 debug_color = Color(1, 0.14901961, 0, 0.41960785)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1502771855]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 69.207695, 13.020451, -43.788498)
+texture = ExtResource("14_w48qg")
 
 [editable path="ScreenFader"]
 [editable path="Obstacle_Base"]
