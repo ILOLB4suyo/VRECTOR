@@ -101,3 +101,8 @@ func handle_game_over(player):
 		await fail_sfx.finished
 
 	get_tree().reload_current_scene()
+
+
+func _exit_tree():
+	if typing_prompt and typing_prompt.typing_finished.is_connected(_on_typing_finished):
+		typing_prompt.typing_finished.disconnect(_on_typing_finished)

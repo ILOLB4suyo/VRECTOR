@@ -11,6 +11,8 @@ var can_move := true
 
 func force_jump():
 	velocity.y = jump_velocity
+	if jump_sfx:
+		jump_sfx.play()
 	
 
 func do_jump():

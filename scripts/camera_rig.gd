@@ -11,16 +11,22 @@ extends Node3D
 
 @export var smooth_speed := 10.0
 
-
 var slowmo_active := false
-
+var follow_player := true   # 🔥 NEW
 
 func _process(delta: float):
 	if player == null:
 		return
 
-	# gunakan real delta (tidak terpengaruh slowmo)
 	var real_delta := delta / Engine.time_scale
+
+	# 🔒 FOLLOW PLAYER HANYA JIKA DIIZINKAN
+	if follow_player:
+		global_position.x = lerp(
+			global_position.x,
+			player.global_position.x,
+			smooth_speed * real_delta
+		)
 
 	var target_offset := slowmo_offset if slowmo_active else normal_offset
 	var target_fov := slowmo_fov if slowmo_active else normal_fov

@@ -15,6 +15,12 @@ run/main_scene="uid://dyrlduw63opra"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AchiveSFX="*uid://df441p5hp5q77"
+LevelManager="*uid://bdfkwvoxvcqa2"
+ScreenFader="*uid://bbpl6brbr7wg2"
+
 [filesystem]
 
 import/blender/enabled=false

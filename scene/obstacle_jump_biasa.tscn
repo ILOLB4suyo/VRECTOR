@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dt1eqcedlw3lu"]
 
 [ext_resource type="PackedScene" uid="uid://d0r2ghibywle6" path="res://scene/Obstacle_Base.tscn" id="1_7gu6h"]
+[ext_resource type="Script" uid="uid://bcojle4bvyc4v" path="res://scripts/Obstacle_Jump.gd" id="2_dp7pj"]
 
 [node name="Obstacle_Base" unique_id=1114171317 instance=ExtResource("1_7gu6h")]
+script = ExtResource("2_dp7pj")
 
 [node name="TypingPrompt" parent="." index="3" unique_id=94770377]
 target_phrase = "ADMIN MMQ"
