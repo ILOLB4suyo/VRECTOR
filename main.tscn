@@ -109,6 +109,9 @@ environment = SubResource("Environment_ig7tw")
 [node name="Obstacle_Base" parent="." unique_id=1114171317 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.330399, 0.42332983, 0)
 
+[node name="AchieveSFX" type="AudioStreamPlayer" parent="Obstacle_Base/TypingPrompt" parent_id_path=PackedInt32Array(1114171317, 94770377) index="3" unique_id=1773407671]
+stream = ExtResource("5_kek77")
+
 [node name="Obstacle_Base2" parent="." unique_id=2114639041 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.95827, 0.42921162, 0.26689363)
 
