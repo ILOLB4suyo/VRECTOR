@@ -10,7 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bh8fyuc5iohmx" path="res://scene/Obstacle_kasih_jalan.tscn" id="8_q0xi3"]
 [ext_resource type="Script" uid="uid://c222wv16rqmvo" path="res://scripts/obstacle_kasih_jalan.gd" id="9_nwnlh"]
 [ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="10_e3avg"]
-[ext_resource type="Script" uid="uid://ddnfmimkxupbx" path="res://scripts/CameraStopArea.gd" id="11_0rx21"]
+[ext_resource type="Script" path="res://scripts/CameraStopArea.gd" id="11_0rx21"]
+[ext_resource type="PackedScene" uid="uid://bodm4be6gci63" path="res://scene/obstacle_panjat_tali.tscn" id="12_i12my"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
@@ -26,16 +27,31 @@ background_mode = 1
 background_color = Color(0.43476555, 0.5112999, 0.9320936, 1)
 ambient_light_color = Color(0.9682787, 0.53369856, 0.5930169, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
+size = Vector3(12.559809, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4c57u"]
+size = Vector3(12.478607, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+albedo_color = Color(0, 0.5661477, 0.5286518, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
+size = Vector3(4.662269, 2.6748047, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
+size = Vector3(3.2925415, 1, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
 size = Vector3(8, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhmcf"]
 size = Vector3(8.123276, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_p0224"]
 size = Vector3(10.855347, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8p00"]
 albedo_color = Color(0.7626621, 8.143723e-05, 0.6211426, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4c57u"]
@@ -44,7 +60,7 @@ size = Vector3(10.92, 1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycdy4"]
 size = Vector3(1.7355347, 3.5062256, 1.4462891)
 
-[node name="Main" type="Node3D" unique_id=435557819]
+[node name="Main2" type="Node3D" unique_id=435557819]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=35198490]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.460217, -0.2640075, 0.08325195)
@@ -59,7 +75,7 @@ use_collision = true
 size = Vector3(30.619837, 1, 1.6572266)
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="." unique_id=2094153627]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2762, 5.065338, -0.9999323)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2762, 8.301823, -0.9999323)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
 size = Vector3(2.458356, 11.658691, 2.3203125)
@@ -77,19 +93,19 @@ use_collision = true
 size = Vector3(23.403988, 1, 1.6572266)
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=1719647582]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.5034, -0.2640075, 0.08325195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.03154, -0.2640075, 0.08325195)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
-size = Vector3(26.195158, 1, 1.6572266)
+size = Vector3(9.251427, 1, 1.6572266)
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="." unique_id=1525728562]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.24081, -0.2640075, 0.08325195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 149.43939, -0.2640075, 0.08325195)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
 size = Vector3(26.195158, 1, 1.6572266)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="." unique_id=504390160]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.914696, -0.2640075, 0.08325195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.11327, -0.2640075, 0.08325195)
 material_override = SubResource("StandardMaterial3D_dg77c")
 use_collision = true
 size = Vector3(1.7990336, 1, 1.6572266)
@@ -144,6 +160,21 @@ environment = SubResource("Environment_ig7tw")
 [node name="Obstacle_Base" parent="." unique_id=1114171317 instance=ExtResource("6_jw1dd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.330399, 0.42332983, -10.493516)
 
+[node name="CollisionShape3D" parent="Obstacle_Base/ObstacleHitbox" parent_id_path=PackedInt32Array(1114171317, 1393558703) index="0" unique_id=464020481]
+shape = SubResource("BoxShape3D_5vw27")
+
+[node name="CollisionShape3D" parent="Obstacle_Base/StaticBody3D" parent_id_path=PackedInt32Array(1114171317, 1288428675) index="0" unique_id=1117011116]
+shape = SubResource("BoxShape3D_4c57u")
+
+[node name="CSGBox3D" parent="Obstacle_Base/StaticBody3D" parent_id_path=PackedInt32Array(1114171317, 1288428675) index="1" unique_id=1443130602]
+material = SubResource("StandardMaterial3D_kek77")
+
+[node name="CollisionShape3D" parent="Obstacle_Base/SlowmoArea" parent_id_path=PackedInt32Array(1114171317, 676845770) index="0" unique_id=692299938]
+shape = SubResource("BoxShape3D_kek77")
+
+[node name="CollisionShape3D" parent="Obstacle_Base/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1114171317, 1789275130) index="0" unique_id=569269197]
+shape = SubResource("BoxShape3D_272bh")
+
 [node name="AchieveSFX" parent="Obstacle_Base/TypingPrompt" parent_id_path=PackedInt32Array(1114171317, 94770377) index="1" unique_id=852373413]
 process_mode = 3
 volume_db = 80.0
@@ -156,20 +187,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.95827, 0.42921162, 0.26689
 
 [node name="CollisionShape3D" parent="Obstacle_Base2/ObstacleHitbox" parent_id_path=PackedInt32Array(2114639041, 1393558703) index="0" unique_id=464020481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5915413, -2.9914026, -0.14335561)
+shape = SubResource("BoxShape3D_5vw27")
 
 [node name="CollisionShape3D" parent="Obstacle_Base2/StaticBody3D" parent_id_path=PackedInt32Array(2114639041, 1288428675) index="0" unique_id=1117011116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4017334, -3.3280478, -0.17864025)
+shape = SubResource("BoxShape3D_4c57u")
 
 [node name="CSGBox3D" parent="Obstacle_Base2/StaticBody3D" parent_id_path=PackedInt32Array(2114639041, 1288428675) index="1" unique_id=1443130602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.906456, -3.3667111, -0.23432076)
 use_collision = true
 size = Vector3(5.2252197, 1, 1)
+material = SubResource("StandardMaterial3D_kek77")
 
 [node name="SlowmoArea" parent="Obstacle_Base2" index="2" unique_id=676845770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0512085, 0.47901487, 0)
 
+[node name="CollisionShape3D" parent="Obstacle_Base2/SlowmoArea" index="0" unique_id=692299938]
+shape = SubResource("BoxShape3D_kek77")
+
 [node name="TypingPrompt" parent="Obstacle_Base2" index="3" unique_id=94770377]
 target_phrase = "BUKA CELANA"
+
+[node name="CollisionShape3D" parent="Obstacle_Base2/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(2114639041, 1789275130) index="0" unique_id=569269197]
+shape = SubResource("BoxShape3D_272bh")
 
 [node name="Obstacle_kasih_jalan" parent="." unique_id=532910985 instance=ExtResource("8_q0xi3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.78419, 0.5250759, 0.42309284)
@@ -178,19 +218,28 @@ platform_speed = 13.0
 
 [node name="CollisionShape3D" parent="Obstacle_kasih_jalan/ObstacleHitbox" parent_id_path=PackedInt32Array(532910985, 1393558703) index="0" unique_id=464020481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.304161, -3.0918374, 0)
+shape = SubResource("BoxShape3D_5vw27")
 
 [node name="StaticBody3D" parent="Obstacle_kasih_jalan" index="1" unique_id=1288428675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5603466, -2.9924374, 0)
 
 [node name="CollisionShape3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="0" unique_id=1117011116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5418243, 0.3207221, 0)
+shape = SubResource("BoxShape3D_4c57u")
 
 [node name="CSGBox3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="1" unique_id=1443130602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.557274, 0.35950923, 0)
 size = Vector3(12.526855, 1, 1)
+material = SubResource("StandardMaterial3D_kek77")
+
+[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/SlowmoArea" parent_id_path=PackedInt32Array(532910985, 676845770) index="0" unique_id=692299938]
+shape = SubResource("BoxShape3D_kek77")
 
 [node name="TypingPrompt" parent="Obstacle_kasih_jalan" index="3" unique_id=94770377]
 target_phrase = "JALAND"
+
+[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(532910985, 1789275130) index="0" unique_id=569269197]
+shape = SubResource("BoxShape3D_272bh")
 
 [node name="AchieveSFX" parent="Obstacle_kasih_jalan/TypingPrompt" index="1" unique_id=852373413]
 volume_db = 0.0
@@ -207,7 +256,7 @@ mesh = SubResource("BoxMesh_5vw27")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform1" unique_id=1630058696]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4322433, -4.8160343, 0)
-shape = SubResource("BoxShape3D_kek77")
+shape = SubResource("BoxShape3D_xhmcf")
 
 [node name="PlatformTarget13" type="Node3D" parent="Obstacle_kasih_jalan" unique_id=133952520]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.836624, 1.8320823, 0)
@@ -217,25 +266,57 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.353595, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1330219848]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.248512, 0, 0)
-shape = SubResource("BoxShape3D_5vw27")
+shape = SubResource("BoxShape3D_p0224")
 debug_color = Color(0, 0, 0, 0.41960785)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1978854187]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.275066, 0, 0)
-material_override = SubResource("StandardMaterial3D_kek77")
+material_override = SubResource("StandardMaterial3D_f8p00")
 mesh = SubResource("BoxMesh_4c57u")
 
 [node name="Obstacle_Base3" parent="." unique_id=1102102696 instance=ExtResource("10_e3avg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.433239, 0.27642298, -0.10836077)
+
+[node name="CollisionShape3D" parent="Obstacle_Base3/ObstacleHitbox" parent_id_path=PackedInt32Array(1102102696, 1393558703) index="0" unique_id=464020481]
+shape = SubResource("BoxShape3D_5vw27")
+
+[node name="CollisionShape3D" parent="Obstacle_Base3/StaticBody3D" parent_id_path=PackedInt32Array(1102102696, 1288428675) index="0" unique_id=1117011116]
+shape = SubResource("BoxShape3D_4c57u")
+
+[node name="CSGBox3D" parent="Obstacle_Base3/StaticBody3D" parent_id_path=PackedInt32Array(1102102696, 1288428675) index="1" unique_id=1443130602]
+material = SubResource("StandardMaterial3D_kek77")
+
+[node name="CollisionShape3D" parent="Obstacle_Base3/SlowmoArea" parent_id_path=PackedInt32Array(1102102696, 676845770) index="0" unique_id=692299938]
+shape = SubResource("BoxShape3D_kek77")
+
+[node name="CollisionShape3D" parent="Obstacle_Base3/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1102102696, 1789275130) index="0" unique_id=569269197]
+shape = SubResource("BoxShape3D_272bh")
 
 [node name="CameraStopArea" type="Area3D" parent="." unique_id=2137331327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.989746, 0, 0)
 script = ExtResource("11_0rx21")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraStopArea" unique_id=309936664]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1468506, 0.95957124, 0.22314453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.345428, 0.95957124, 0.22314453)
 shape = SubResource("BoxShape3D_ycdy4")
 debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="." unique_id=1797953491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.06904, 7.4249268, -0.10351515)
+material_override = SubResource("StandardMaterial3D_0xm2m")
+use_collision = true
+size = Vector3(9.251427, 1, 3.2885742)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=253519360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.38788, 4.1952214, 0)
+use_collision = true
+radius = 0.16015625
+height = 6.9848633
+
+[node name="Obstacle_Base4" parent="." unique_id=1214855806 instance=ExtResource("12_i12my")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.569725, 1.6101589, -0.12394619)
+climb_height = 8
+climb_duration = 2
 
 [editable path="Obstacle_Base"]
 [editable path="Obstacle_Base2"]

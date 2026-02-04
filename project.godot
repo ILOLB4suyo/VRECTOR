@@ -17,9 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AchiveSFX="*uid://df441p5hp5q77"
+GlobalSFX="*uid://ctvny5pobtk33"
 LevelManager="*uid://bdfkwvoxvcqa2"
 ScreenFader="*uid://bbpl6brbr7wg2"
+AchiveSFX="*uid://df441p5hp5q77"
 
 [filesystem]
 
