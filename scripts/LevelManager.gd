@@ -1,7 +1,7 @@
 extends Node
 
 var levels := [
-	"res://main.stcn",
+	"res://main.tcsn",
 	"res://Levels/Level_2.tscn"
 ]
 

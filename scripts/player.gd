@@ -8,6 +8,7 @@ extends CharacterBody3D
 
 
 var can_move := true
+var is_climbing := false
 
 func force_jump():
 	velocity.y = jump_velocity
@@ -26,11 +27,42 @@ func do_jump():
 		if jump_sfx:
 			jump_sfx.play()
 
-
+func do_climb(target_height: float, duration: float = 2.5):
+	if is_climbing:
+		return
+	
+	is_climbing = true
+	can_move = false
+	print("🧗 Player memanjat setinggi", target_height, "meter dalam", duration, "detik")
+	
+	var start_y = global_position.y
+	var target_y = start_y + target_height
+	var elapsed = 0.0
+	
+	# Animasi naik smooth
+	while elapsed < duration:
+		elapsed += get_process_delta_time()
+		var progress = elapsed / duration
+		
+		# Easing untuk gerakan smooth
+		var eased = ease(progress, -2.0)
+		
+		global_position.y = lerp(start_y, target_y, eased)
+		
+		await get_tree().process_frame
+	
+	# Pastikan sampai posisi akhir
+	global_position.y = target_y
+	
+	is_climbing = false
+	can_move = true
+	print("✓ Selesai memanjat!")
 
 
 func _physics_process(delta: float) -> void:
 	# Auto-run ke kanan (sumbu X)
+	if is_climbing:
+		return
 	velocity.x = run_speed
 	velocity.z = 0.0
 

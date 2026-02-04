@@ -2,4 +2,34 @@
 
 [ext_resource type="PackedScene" uid="uid://d0r2ghibywle6" path="res://scene/Obstacle_Base.tscn" id="1_lbjxo"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
+size = Vector3(12.559809, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4c57u"]
+size = Vector3(12.478607, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+albedo_color = Color(0, 0.5661477, 0.5286518, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
+size = Vector3(4.662269, 2.6748047, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
+size = Vector3(3.2925415, 1, 1)
+
 [node name="Obstacle_Base" unique_id=1114171317 instance=ExtResource("1_lbjxo")]
+
+[node name="CollisionShape3D" parent="ObstacleHitbox" parent_id_path=PackedInt32Array(1393558703) index="0" unique_id=464020481]
+shape = SubResource("BoxShape3D_5vw27")
+
+[node name="CollisionShape3D" parent="StaticBody3D" parent_id_path=PackedInt32Array(1288428675) index="0" unique_id=1117011116]
+shape = SubResource("BoxShape3D_4c57u")
+
+[node name="CSGBox3D" parent="StaticBody3D" parent_id_path=PackedInt32Array(1288428675) index="1" unique_id=1443130602]
+material = SubResource("StandardMaterial3D_kek77")
+
+[node name="CollisionShape3D" parent="SlowmoArea" parent_id_path=PackedInt32Array(676845770) index="0" unique_id=692299938]
+shape = SubResource("BoxShape3D_kek77")
+
+[node name="CollisionShape3D" parent="TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1789275130) index="0" unique_id=569269197]
+shape = SubResource("BoxShape3D_272bh")
