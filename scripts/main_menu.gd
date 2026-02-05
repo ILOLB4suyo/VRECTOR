@@ -42,10 +42,7 @@ func update_display():
 	
 	# Visual feedback - warna berubah sesuai progress
 	if typed_text.length() == 0:
-		input_label.modulate = Color.WHITE
-	elif TARGET_WORD.begins_with(typed_text):
-		# Benar sejauh ini - kuning
-		input_label.modulate = Color.YELLOW
+		input_label.modulate = Color.BLACK
 	else:
 		# Salah - merah
 		input_label.modulate = Color.RED
@@ -54,8 +51,8 @@ func on_correct_input():
 	print("✓ Correct! Starting game...")
 	
 	# Visual feedback
-	input_label.text = "✓ " + typed_text + " ✓"
-	input_label.modulate = Color.GREEN
+	input_label.text =  typed_text 
+	input_label.modulate = Color.BLUE
 	
 	# Play SFX
 	if achieve_sfx:
