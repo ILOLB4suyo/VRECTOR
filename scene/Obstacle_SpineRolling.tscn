@@ -8,7 +8,7 @@
 radius = 1.0227844
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kut1s"]
-radius = 1.7056178
+radius = 1.0698318
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kut1s"]
 size = Vector3(1, 2.8475342, 1.46875)
@@ -43,5 +43,6 @@ volume_db = -10.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StartArea" unique_id=913707147]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9237671, 4.2241907)
 shape = SubResource("BoxShape3D_kut1s")
+debug_color = Color(0.9977123, 0, 0.17001125, 0.41960785)
 
 [editable path="Spine/barrel"]

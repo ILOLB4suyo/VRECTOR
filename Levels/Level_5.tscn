@@ -40,10 +40,10 @@ size = Vector3(1.2939453, 3.9180908, 1.5878906)
 layer = 100
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1802738871]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5324, -0.2640075, 0.08325195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.86261, -0.2640075, 0.08325195)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
-size = Vector3(33.7004, 1, 1.6572266)
+size = Vector3(42.36082, 1, 1.6572266)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=982760923]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.73791, 9.9288225, 0.08325195)
@@ -108,7 +108,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("2_rmgrl")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 47.72726, 11.126339, 0.368999)
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 15.465755, 0.3385284, 0.368999)
 script = ExtResource("3_ngdf5")
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
@@ -156,9 +156,6 @@ roll_speed = 13.0
 [node name="StartArea" parent="Obstacle_SpineRolling" index="2" unique_id=502481537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7252903e-09, 0, 9.199193)
 
-[node name="CollisionShape3D" parent="Obstacle_SpineRolling/StartArea" index="0" unique_id=913707147]
-debug_color = Color(0.9977123, 0, 0.17001125, 0.41960785)
-
 [node name="Obstacle_Speedboost" parent="." unique_id=728817210 instance=ExtResource("11_5hsvw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.68386, 0.47361135, 0.14272249)
 speed_multiplier = 2.5
@@ -172,7 +169,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.1329613, 3.8694425)
 
 [node name="CollisionShape3D" parent="Obstacle_SpineRolling2/StartArea" index="0" unique_id=913707147]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8626451e-09, 0.9237671, 8.526215)
-debug_color = Color(0.9977123, 0, 0.17001125, 0.41960785)
 
 [node name="VidioIntro" type="CanvasLayer" parent="." unique_id=952452395]
 layer = 0
