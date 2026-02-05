@@ -1,17 +1,18 @@
-[gd_scene format=3 uid="uid://l8qkm2urh1lo"]
+[gd_scene format=3 uid="uid://qdpo4vjwu78u"]
 
-[ext_resource type="PackedScene" uid="uid://bbpl6brbr7wg2" path="res://scene/ScreenFader.tscn" id="1_4m54r"]
-[ext_resource type="PackedScene" uid="uid://dsg2y4i3584ua" path="res://scene/Player.tscn" id="2_ti2hy"]
-[ext_resource type="Script" uid="uid://b4alnyj007jv4" path="res://scripts/player.gd" id="3_r4fpt"]
-[ext_resource type="AudioStream" uid="uid://b518nilo4io3v" path="res://Assets/Music/sfx/jump..ogg" id="4_upn1n"]
-[ext_resource type="PackedScene" uid="uid://bh7w8v577cly0" path="res://scene/camera_rig.tscn" id="5_jc4en"]
-[ext_resource type="Script" uid="uid://b1aq20l1d1ftk" path="res://scripts/camera_rig.gd" id="6_id4dl"]
-[ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="9_1e8c6"]
-[ext_resource type="Script" uid="uid://ddnfmimkxupbx" path="res://scripts/CameraStopArea.gd" id="10_5cl1n"]
-[ext_resource type="Script" uid="uid://bwdjrogetrqul" path="res://LevelEndArea.gd" id="11_jdpeg"]
-[ext_resource type="PackedScene" uid="uid://bmmhtdvxvvmsr" path="res://scene/camera_stop_area.tscn" id="12_rhmms"]
-[ext_resource type="PackedScene" uid="uid://uwjstab2x00k" path="res://scene/Obstacle_SpineRolling.tscn" id="13_y58m1"]
-[ext_resource type="PackedScene" uid="uid://ct0f1ow5n3xm2" path="res://scene/Obstacle_Speedboost.tscn" id="14_46jcg"]
+[ext_resource type="PackedScene" uid="uid://bbpl6brbr7wg2" path="res://scene/ScreenFader.tscn" id="1_ymlwn"]
+[ext_resource type="PackedScene" uid="uid://dsg2y4i3584ua" path="res://scene/Player.tscn" id="2_rmgrl"]
+[ext_resource type="Script" uid="uid://b4alnyj007jv4" path="res://scripts/player.gd" id="3_ngdf5"]
+[ext_resource type="AudioStream" uid="uid://b518nilo4io3v" path="res://Assets/Music/sfx/jump..ogg" id="4_0fykt"]
+[ext_resource type="PackedScene" uid="uid://bh7w8v577cly0" path="res://scene/camera_rig.tscn" id="5_kgivn"]
+[ext_resource type="Script" uid="uid://b1aq20l1d1ftk" path="res://scripts/camera_rig.gd" id="6_7101h"]
+[ext_resource type="Script" uid="uid://ddnfmimkxupbx" path="res://scripts/CameraStopArea.gd" id="7_w2j4p"]
+[ext_resource type="Script" uid="uid://bwdjrogetrqul" path="res://LevelEndArea.gd" id="8_jiacp"]
+[ext_resource type="PackedScene" uid="uid://bmmhtdvxvvmsr" path="res://scene/camera_stop_area.tscn" id="9_vcatn"]
+[ext_resource type="PackedScene" uid="uid://uwjstab2x00k" path="res://scene/Obstacle_SpineRolling.tscn" id="10_o1om3"]
+[ext_resource type="PackedScene" uid="uid://ct0f1ow5n3xm2" path="res://scene/Obstacle_Speedboost.tscn" id="11_5hsvw"]
+[ext_resource type="Script" uid="uid://do0tkjg5labak" path="res://scripts/VideoIntro.gd" id="12_ngdf5"]
+[ext_resource type="VideoStream" uid="uid://trpcvapt7q3d" path="res://Assets/Video/demo.ogv" id="13_0fykt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
@@ -35,7 +36,7 @@ size = Vector3(1.2939453, 3.9180908, 1.5878906)
 
 [node name="Main" type="Node3D" unique_id=435557819]
 
-[node name="ScreenFader" parent="." unique_id=1277485170 instance=ExtResource("1_4m54r")]
+[node name="ScreenFader" parent="." unique_id=1277485170 instance=ExtResource("1_ymlwn")]
 layer = 100
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1802738871]
@@ -45,10 +46,24 @@ use_collision = true
 size = Vector3(33.7004, 1, 1.6572266)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=982760923]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.60851, 9.9288225, 0.08325195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.73791, 9.9288225, 0.08325195)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
-size = Vector3(18.581373, 1, 1.6572266)
+size = Vector3(46.840168, 1, 1.6572266)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=2107755876]
+transform = Transform3D(0.98517525, 0.17155083, 0, -0.17155083, 0.98517525, 0, 0, 0, 1, 41.89766, 17.315357, 0.08325195)
+material_override = SubResource("StandardMaterial3D_0xm2m")
+transparency = 1.0
+use_collision = true
+size = Vector3(6.036292, 1, 1.6572266)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=1600620534]
+transform = Transform3D(0.98517525, 0.17155083, 0, -0.17155083, 0.98517525, 0, 0, 0, 1, 42.283154, 19.529144, 1.9974084)
+material_override = SubResource("StandardMaterial3D_0xm2m")
+transparency = 1.0
+use_collision = true
+size = Vector3(6.036292, 5.4942017, 1.6572266)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1652466818]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.940216, -0.2640075, 0.08325195)
@@ -91,18 +106,18 @@ transform = Transform3D(0.3099708, 0.95071477, -0.00771707, 0.015969843, 0.00290
 light_color = Color(0.85777944, 0.6229488, 0.61109245, 1)
 light_energy = 2.109
 
-[node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("2_ti2hy")]
+[node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("2_rmgrl")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 46.85603, 11.126339, 0.368999)
-script = ExtResource("3_r4fpt")
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 47.72726, 11.126339, 0.368999)
+script = ExtResource("3_ngdf5")
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
-stream = ExtResource("4_upn1n")
+stream = ExtResource("4_0fykt")
 volume_db = -10.0
 
-[node name="CameraRig" parent="Player" unique_id=1786440836 node_paths=PackedStringArray("player") instance=ExtResource("5_jc4en")]
+[node name="CameraRig" parent="Player" unique_id=1786440836 node_paths=PackedStringArray("player") instance=ExtResource("5_kgivn")]
 transform = Transform3D(0.9994862, 0, -0.0320561, 0, 1, 0, 0.0320561, 0, 0.9994862, 0.02135244, 5.2452087e-06, 10.649474)
-script = ExtResource("6_id4dl")
+script = ExtResource("6_7101h")
 player = NodePath("..")
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Player" unique_id=565584918]
@@ -112,7 +127,7 @@ environment = SubResource("Environment_ig7tw")
 
 [node name="CameraStopArea" type="Area3D" parent="." unique_id=2137331327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.989746, 5.854616, 0)
-script = ExtResource("10_5cl1n")
+script = ExtResource("7_w2j4p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraStopArea" unique_id=309936664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.176903, -3.7253957, 0.22314453)
@@ -121,48 +136,64 @@ debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="LevelEndArea" type="Area3D" parent="." unique_id=1067367995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.996826, 5.880784, 0)
-script = ExtResource("11_jdpeg")
+script = ExtResource("8_jiacp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelEndArea" unique_id=1941818810]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.38925, -3.5442915, 0.2939453)
 shape = SubResource("BoxShape3D_w48qg")
 debug_color = Color(1, 0.14901961, 0, 0.41960785)
 
-[node name="CameraStopArea2" parent="." unique_id=719171326 instance=ExtResource("12_rhmms")]
+[node name="CameraStopArea2" parent="." unique_id=719171326 instance=ExtResource("9_vcatn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.889374, -7.170399, -0.2321397)
 
 [node name="CollisionShape3D" parent="CameraStopArea2" index="0" unique_id=867923425]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.46426, -0.18675804, -61.30226)
 
-[node name="Obstacle_Jump_Biasa" parent="." unique_id=1555255629 instance=ExtResource("9_1e8c6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.137478, 10.498206, 0.0054860115)
-
-[node name="ObstacleHitbox" parent="Obstacle_Jump_Biasa" index="0" unique_id=1393558703]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.851633, 0.41977072, 0)
-
-[node name="CollisionShape3D" parent="Obstacle_Jump_Biasa/ObstacleHitbox" index="0" unique_id=464020481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1784916, -2.0480056, 0)
-
-[node name="StaticBody3D" parent="Obstacle_Jump_Biasa" index="1" unique_id=1288428675]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6928234, 1.5644857, 0)
-
-[node name="TypingPrompt" parent="Obstacle_Jump_Biasa" index="3" unique_id=94770377]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927261, 2.8508387, 0.15519238)
-target_phrase = "LETSGO"
-
-[node name="Obstacle_SpineRolling" parent="." unique_id=649545288 instance=ExtResource("13_y58m1")]
+[node name="Obstacle_SpineRolling" parent="." unique_id=649545288 instance=ExtResource("10_o1om3")]
 transform = Transform3D(0.005934078, 0, 0.99998236, 0, 1, 0, -0.99998236, 0, 0.005934078, 67.33845, 0.23599148, 0.20819145)
 roll_speed = 13.0
 
 [node name="StartArea" parent="Obstacle_SpineRolling" index="2" unique_id=502481537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7252903e-09, 0, 9.199193)
 
-[node name="Obstacle_Speedboost" parent="." unique_id=728817210 instance=ExtResource("14_46jcg")]
+[node name="CollisionShape3D" parent="Obstacle_SpineRolling/StartArea" index="0" unique_id=913707147]
+debug_color = Color(0.9977123, 0, 0.17001125, 0.41960785)
+
+[node name="Obstacle_Speedboost" parent="." unique_id=728817210 instance=ExtResource("11_5hsvw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.68386, 0.47361135, 0.14272249)
 speed_multiplier = 2.5
 
+[node name="Obstacle_SpineRolling2" parent="." unique_id=2126261418 instance=ExtResource("10_o1om3")]
+transform = Transform3D(-0.012653295, 0, 0.99991995, 0, 1, 0, -0.99991995, 0, -0.012653295, 41.87734, 18.452038, 0.102325514)
+roll_speed = 12.0
+
+[node name="StartArea" parent="Obstacle_SpineRolling2" index="2" unique_id=502481537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.1329613, 3.8694425)
+
+[node name="CollisionShape3D" parent="Obstacle_SpineRolling2/StartArea" index="0" unique_id=913707147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8626451e-09, 0.9237671, 8.526215)
+debug_color = Color(0.9977123, 0, 0.17001125, 0.41960785)
+
+[node name="VidioIntro" type="CanvasLayer" parent="." unique_id=952452395]
+layer = 0
+script = ExtResource("12_ngdf5")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="VidioIntro" unique_id=1263758507]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 82.0
+offset_top = 46.0
+offset_right = -67.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("13_0fykt")
+expand = true
+
 [editable path="ScreenFader"]
 [editable path="CameraStopArea2"]
-[editable path="Obstacle_Jump_Biasa"]
 [editable path="Obstacle_SpineRolling"]
 [editable path="Obstacle_SpineRolling/Spine/barrel"]
+[editable path="Obstacle_SpineRolling2"]
+[editable path="Obstacle_SpineRolling2/Spine/barrel"]

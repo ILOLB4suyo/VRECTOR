@@ -6,11 +6,12 @@ extends Node3D
 @onready var typing_prompt := $TypingPrompt
 @onready var platform := $Platform
 @onready var platform_target := $PlatformTarget
+@onready var fail_sfx := $FailSFX
 
 @export var platform_speed := 13.0
 
 
-
+var game_over_triggered := false
 
 var cleared := false
 var platform_moving := false
@@ -54,11 +55,23 @@ func _physics_process(delta):
 		platform_moving = false
 
 
-func _on_player_hit(body):
-	if cleared:
-		return
 
-	#if body.is_in_group("player"):
-		#print("FAIL → player mati")
-		#get_tree().reload_current_scene()
-		#
+func _on_player_hit(body):
+	if cleared or game_over_triggered:
+		return
+	
+	if body.is_in_group("player"):
+		game_over_triggered = true
+		handle_game_over(body)
+
+func handle_game_over(player):
+	print("💀 GAME OVER - Player kena obstacle")
+	
+	Engine.time_scale = 1.0
+	player.can_move = false
+	
+	if fail_sfx:
+		fail_sfx.play()
+		await fail_sfx.finished
+	
+	get_tree().reload_current_scene()

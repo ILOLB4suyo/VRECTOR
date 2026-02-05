@@ -9,22 +9,16 @@
 [ext_resource type="PackedScene" uid="uid://d0r2ghibywle6" path="res://scene/Obstacle_Base.tscn" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://df441p5hp5q77" path="res://scripts/AchiveSFX.gd" id="7_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bh8fyuc5iohmx" path="res://scene/Obstacle_kasih_jalan.tscn" id="7_5vw27"]
-[ext_resource type="Script" uid="uid://c222wv16rqmvo" path="res://scripts/obstacle_kasih_jalan.gd" id="8_kek77"]
 [ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="10_4c57u"]
-[ext_resource type="Script" path="res://scripts/CameraStopArea.gd" id="11_efxa6"]
+[ext_resource type="Script" uid="uid://ddnfmimkxupbx" path="res://scripts/CameraStopArea.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://bwdjrogetrqul" path="res://LevelEndArea.gd" id="12_dg77c"]
-[ext_resource type="PackedScene" uid="uid://ct0f1ow5n3xm2" path="res://scene/Obstacle_Speedboost.tscn" id="14_w48qg"]
-[ext_resource type="PackedScene" uid="uid://uwjstab2x00k" path="res://scene/Obstacle_SpineRolling.tscn" id="15_vivmo"]
-[ext_resource type="PackedScene" uid="uid://f4xpiidpfpcf" path="res://scene/Obstacle_Pilihan.tscn" id="16_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://bmmhtdvxvvmsr" path="res://scene/camera_stop_area.tscn" id="18_cegan"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dg77c"]
 albedo_color = Color(0.2826393, 0.60441995, 1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bvp3"]
-albedo_color = Color(0, 0.61565197, 0.5828061, 1)
 
 [sub_resource type="Environment" id="Environment_ig7tw"]
 background_mode = 1
@@ -46,25 +40,10 @@ size = Vector3(4.662269, 2.6748047, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
 size = Vector3(3.2925415, 1, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
-size = Vector3(8, 1, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_vivmo"]
-size = Vector3(8.123276, 1, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_2cqfq"]
-size = Vector3(10.855347, 1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yaehf"]
-albedo_color = Color(0.7626621, 8.143723e-05, 0.6211426, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_4c57u"]
-size = Vector3(10.92, 1, 1)
-
 [sub_resource type="FontVariation" id="FontVariation_w48qg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycdy4"]
-size = Vector3(1.7355347, 3.5062256, 1.4462891)
+size = Vector3(1.7355347, 3.500183, 1.4462891)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w48qg"]
 size = Vector3(1.2939453, 3.9180908, 1.5878906)
@@ -74,17 +53,11 @@ size = Vector3(1.2939453, 3.9180908, 1.5878906)
 [node name="ScreenFader" parent="." unique_id=1277485170 instance=ExtResource("1_ycdy4")]
 layer = 100
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=35198490]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.460217, -0.2640075, 0.08325195)
+[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1802738871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.676545, -0.2640075, 0.08325195)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
-size = Vector3(30.619837, 1, 1.6572266)
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=182272353]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.460217, -0.2640075, -23.259115)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(30.619837, 1, 1.6572266)
+size = Vector3(27.988691, 1, 1.6572266)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=982760923]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.570248, -0.2640075, 0.08325195)
@@ -93,16 +66,16 @@ use_collision = true
 size = Vector3(17.02969, 1, 1.6572266)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1652466818]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.938133, -0.2640075, 0.08325195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.8568, -0.2640075, 0.08325195)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
-size = Vector3(23.403988, 1, 1.6572266)
+size = Vector3(19.607754, 1, 1.6572266)
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=1719647582]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.69975, -0.2640075, 0.08325195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.99518, -0.2640075, 0.08325195)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
-size = Vector3(37.802452, 1, 1.6572266)
+size = Vector3(23.2116, 1, 1.6572266)
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="." unique_id=1525728562]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.24081, -0.2640075, 0.08325195)
@@ -110,104 +83,8 @@ material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
 size = Vector3(26.195158, 1, 1.6572266)
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="." unique_id=1405438022]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 194.02037, -0.2640075, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(102.66072, 1, 1.6572266)
-
-[node name="CSGBox3D12" type="CSGBox3D" parent="." unique_id=413519916]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.44524, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D20" type="CSGBox3D" parent="." unique_id=38014067]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.60932, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D21" type="CSGBox3D" parent="." unique_id=682097730]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.70232, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D22" type="CSGBox3D" parent="." unique_id=1490481648]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.15341, 5.6221685, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(23.029747, 1.5497437, 1.6572266)
-
-[node name="CSGBox3D23" type="CSGBox3D" parent="." unique_id=1547938697]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.15341, 2.4753013, -3.0569825)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(23.029747, 1.5497437, 1.6572266)
-
-[node name="CSGBox3D15" type="CSGBox3D" parent="." unique_id=1475154120]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.59203, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D16" type="CSGBox3D" parent="." unique_id=517200047]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.07172, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D17" type="CSGBox3D" parent="." unique_id=1643440347]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 163.71861, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D18" type="CSGBox3D" parent="." unique_id=1742765289]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 173.53185, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D19" type="CSGBox3D" parent="." unique_id=1972152830]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 183.11554, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D24" type="CSGBox3D" parent="." unique_id=831457992]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 193.12833, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D25" type="CSGBox3D" parent="." unique_id=170924402]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 205.26245, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D26" type="CSGBox3D" parent="." unique_id=547829137]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.97786, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D27" type="CSGBox3D" parent="." unique_id=684680576]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 227.90852, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
-[node name="CSGBox3D28" type="CSGBox3D" parent="." unique_id=1772455462]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 237.99239, 7.8457804, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(1.8915243, 6.1073, 1.6572266)
-
 [node name="CSGBox3D14" type="CSGBox3D" parent="." unique_id=593413382]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 246.44826, 2.2881393, 0.08325195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.42836, 2.2881393, 0.08325195)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
 size = Vector3(1.8915243, 6.1073, 1.6572266)
@@ -218,29 +95,6 @@ material_override = SubResource("StandardMaterial3D_dg77c")
 use_collision = true
 size = Vector3(1.7990336, 1, 1.6572266)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=556809220]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.261341, 3.2963157, 0.08325195)
-material_override = SubResource("StandardMaterial3D_1bvp3")
-size = Vector3(0.865839, 1, 1.6572266)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=2060242805]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.964157, 4.512329, 0.08325195)
-material_override = SubResource("StandardMaterial3D_1bvp3")
-use_collision = true
-size = Vector3(0.865839, 1, 1.6572266)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=243508423]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.77542, 5.5200405, 0.08325195)
-material_override = SubResource("StandardMaterial3D_1bvp3")
-use_collision = true
-size = Vector3(0.865839, 1, 1.6572266)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=528281244]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.50935, 12.457256, 0.08325195)
-material_override = SubResource("StandardMaterial3D_1bvp3")
-use_collision = true
-size = Vector3(0.865839, 10.387573, 1.6572266)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1593985146]
 transform = Transform3D(0.3099708, 0.95071477, -0.00771707, 0.015969843, 0.0029092513, 0.9998683, 0.95061195, -0.31005317, -0.014280983, 0, 34.17495, 0)
 light_color = Color(0.85777944, 0.6229488, 0.61109245, 1)
@@ -248,7 +102,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("1_ig7tw")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 178.10144, 0.7997756, 0.368999)
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 5.9786577, 0.7997756, 0.368999)
 script = ExtResource("2_h2yge")
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
@@ -266,10 +120,11 @@ player = NodePath("..")
 environment = SubResource("Environment_ig7tw")
 
 [node name="Obstacle_Base" parent="." unique_id=1114171317 instance=ExtResource("6_7mycd")]
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 26.279114, 0.42276496, -10.501429)
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 26.279114, 30.683865, 13.90666)
 
 [node name="CollisionShape3D" parent="Obstacle_Base/ObstacleHitbox" parent_id_path=PackedInt32Array(1114171317, 1393558703) index="0" unique_id=464020481]
 shape = SubResource("BoxShape3D_5vw27")
+debug_color = Color(0, 0, 0, 0.41960785)
 
 [node name="CollisionShape3D" parent="Obstacle_Base/StaticBody3D" parent_id_path=PackedInt32Array(1114171317, 1288428675) index="0" unique_id=1117011116]
 shape = SubResource("BoxShape3D_4c57u")
@@ -294,124 +149,34 @@ volume_db = 80.0
 [node name="TypingTimer" parent="Obstacle_Base/TypingPrompt" index="2" unique_id=1883947583]
 script = ExtResource("7_4c57u")
 
-[node name="Obstacle_Base2" parent="." unique_id=2114639041 instance=ExtResource("6_7mycd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.95827, 0.42921162, 0.26689363)
-
-[node name="CollisionShape3D" parent="Obstacle_Base2/ObstacleHitbox" parent_id_path=PackedInt32Array(2114639041, 1393558703) index="0" unique_id=464020481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5915413, -2.9914026, -0.14335561)
-shape = SubResource("BoxShape3D_5vw27")
-
-[node name="CollisionShape3D" parent="Obstacle_Base2/StaticBody3D" parent_id_path=PackedInt32Array(2114639041, 1288428675) index="0" unique_id=1117011116]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4017334, -3.3280478, -0.17864025)
-shape = SubResource("BoxShape3D_4c57u")
-
-[node name="CSGBox3D" parent="Obstacle_Base2/StaticBody3D" parent_id_path=PackedInt32Array(2114639041, 1288428675) index="1" unique_id=1443130602]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.906456, -3.3667111, -0.23432076)
-use_collision = true
-size = Vector3(5.2252197, 1, 1)
-material = SubResource("StandardMaterial3D_kek77")
-
-[node name="SlowmoArea" parent="Obstacle_Base2" index="2" unique_id=676845770]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0512085, 0.47901487, 0)
-
-[node name="CollisionShape3D" parent="Obstacle_Base2/SlowmoArea" index="0" unique_id=692299938]
-shape = SubResource("BoxShape3D_kek77")
-
-[node name="TypingPrompt" parent="Obstacle_Base2" index="3" unique_id=94770377]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
-modulate = Color(1, 1, 1, 1)
-target_phrase = "BUKA CELANA"
-
-[node name="CollisionShape3D" parent="Obstacle_Base2/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(2114639041, 1789275130) index="0" unique_id=569269197]
-shape = SubResource("BoxShape3D_272bh")
-
-[node name="Obstacle_kasih_jalan" parent="." unique_id=532910985 instance=ExtResource("7_5vw27")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.78419, 0.5250759, 0.42309284)
-script = ExtResource("8_kek77")
-platform_speed = 13.0
-
-[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/ObstacleHitbox" parent_id_path=PackedInt32Array(532910985, 1393558703) index="0" unique_id=464020481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.304161, -3.0918374, 0)
-shape = SubResource("BoxShape3D_5vw27")
-
-[node name="StaticBody3D" parent="Obstacle_kasih_jalan" index="1" unique_id=1288428675]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5603466, -2.9924374, 0)
-
-[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="0" unique_id=1117011116]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5418243, 0.3207221, 0)
-shape = SubResource("BoxShape3D_4c57u")
-
-[node name="CSGBox3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="1" unique_id=1443130602]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.557274, 0.35950923, 0)
-size = Vector3(12.526855, 1, 1)
-material = SubResource("StandardMaterial3D_kek77")
-
-[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/SlowmoArea" parent_id_path=PackedInt32Array(532910985, 676845770) index="0" unique_id=692299938]
-shape = SubResource("BoxShape3D_kek77")
-
-[node name="TypingPrompt" parent="Obstacle_kasih_jalan" index="3" unique_id=94770377]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
-modulate = Color(1, 1, 1, 1)
-target_phrase = "JALAND"
-
-[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(532910985, 1789275130) index="0" unique_id=569269197]
-shape = SubResource("BoxShape3D_272bh")
-
-[node name="AchieveSFX" parent="Obstacle_kasih_jalan/TypingPrompt" index="1" unique_id=852373413]
-volume_db = 0.0
-
-[node name="PlatformTarget" type="Marker3D" parent="Obstacle_kasih_jalan" unique_id=1912831893]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45677948, -0.73534966, 0)
-
-[node name="Platform1" type="StaticBody3D" parent="Obstacle_kasih_jalan" unique_id=33894597]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5408707, 0.31761754, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle_kasih_jalan/Platform1" unique_id=1597351853]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3996658, -4.879615, 0)
-mesh = SubResource("BoxMesh_5vw27")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform1" unique_id=1630058696]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4322433, -4.8160343, 0)
-shape = SubResource("BoxShape3D_vivmo")
-
-[node name="PlatformTarget13" type="Node3D" parent="Obstacle_kasih_jalan" unique_id=133952520]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.836624, 1.8320823, 0)
-
-[node name="Platform" type="CharacterBody3D" parent="Obstacle_kasih_jalan" unique_id=788766471]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.353595, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1330219848]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.248512, 0, 0)
-shape = SubResource("BoxShape3D_2cqfq")
-debug_color = Color(0, 0, 0, 0.41960785)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1978854187]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.275066, 0, 0)
-material_override = SubResource("StandardMaterial3D_yaehf")
-mesh = SubResource("BoxMesh_4c57u")
-
-[node name="Obstacle_Base3" parent="." unique_id=1102102696 instance=ExtResource("10_4c57u")]
+[node name="Obstacle_Jump_Biasa" parent="." unique_id=1102102696 instance=ExtResource("10_4c57u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.433239, 0.27642298, -0.10836077)
 
-[node name="CollisionShape3D" parent="Obstacle_Base3/ObstacleHitbox" parent_id_path=PackedInt32Array(1102102696, 1393558703) index="0" unique_id=464020481]
+[node name="CollisionShape3D" parent="Obstacle_Jump_Biasa/ObstacleHitbox" parent_id_path=PackedInt32Array(1102102696, 1393558703) index="0" unique_id=464020481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1812305, -6.132631, 0)
 shape = SubResource("BoxShape3D_5vw27")
+debug_color = Color(0, 0, 0, 0.41960785)
 
-[node name="CollisionShape3D" parent="Obstacle_Base3/StaticBody3D" parent_id_path=PackedInt32Array(1102102696, 1288428675) index="0" unique_id=1117011116]
+[node name="StaticBody3D" parent="Obstacle_Jump_Biasa" index="1" unique_id=1288428675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5603466, 17.379341, 0)
+
+[node name="CollisionShape3D" parent="Obstacle_Jump_Biasa/StaticBody3D" index="0" unique_id=1117011116]
 shape = SubResource("BoxShape3D_4c57u")
 
-[node name="CSGBox3D" parent="Obstacle_Base3/StaticBody3D" parent_id_path=PackedInt32Array(1102102696, 1288428675) index="1" unique_id=1443130602]
+[node name="CSGBox3D" parent="Obstacle_Jump_Biasa/StaticBody3D" index="1" unique_id=1443130602]
 material = SubResource("StandardMaterial3D_kek77")
 
-[node name="CollisionShape3D" parent="Obstacle_Base3/SlowmoArea" parent_id_path=PackedInt32Array(1102102696, 676845770) index="0" unique_id=692299938]
+[node name="CollisionShape3D" parent="Obstacle_Jump_Biasa/SlowmoArea" parent_id_path=PackedInt32Array(1102102696, 676845770) index="0" unique_id=692299938]
 shape = SubResource("BoxShape3D_kek77")
 
-[node name="TypingPrompt" parent="Obstacle_Base3" index="3" unique_id=94770377]
+[node name="TypingPrompt" parent="Obstacle_Jump_Biasa" index="3" unique_id=94770377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
 modulate = Color(1, 1, 1, 1)
 font = SubResource("FontVariation_w48qg")
 outline_size = 50
+target_phrase = "HURRY"
 
-[node name="CollisionShape3D" parent="Obstacle_Base3/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1102102696, 1789275130) index="0" unique_id=569269197]
+[node name="CollisionShape3D" parent="Obstacle_Jump_Biasa/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1102102696, 1789275130) index="0" unique_id=569269197]
 shape = SubResource("BoxShape3D_272bh")
 
 [node name="CameraStopArea" type="Area3D" parent="." unique_id=2137331327]
@@ -419,7 +184,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.989746, 5.854616, 0)
 script = ExtResource("11_efxa6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraStopArea" unique_id=309936664]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1468506, 0.95957124, 0.22314453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1468506, -3.7253957, 0.22314453)
 shape = SubResource("BoxShape3D_ycdy4")
 debug_color = Color(1, 0, 0, 0.41960785)
 
@@ -428,41 +193,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.996826, 5.880784, 0)
 script = ExtResource("12_dg77c")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelEndArea" unique_id=1941818810]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14697266, 1.4590454, 0.2939453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14697266, -3.5442915, 0.2939453)
 shape = SubResource("BoxShape3D_w48qg")
 debug_color = Color(1, 0.14901961, 0, 0.41960785)
 
-[node name="Obstacle_Speedboost" parent="." unique_id=1515232294 instance=ExtResource("14_w48qg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.9697, 0.6392729, 0.26684618)
+[node name="CameraStopArea2" parent="." unique_id=719171326 instance=ExtResource("18_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.889374, -7.170399, -0.2321397)
 
-[node name="TypingPrompt" parent="Obstacle_Speedboost" index="3" unique_id=94770377]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
-modulate = Color(1, 1, 1, 1)
-target_phrase = "BOOST"
+[node name="CollisionShape3D" parent="CameraStopArea2" index="0" unique_id=867923425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.46426, -0.18675804, -0.07916021)
 
-[node name="Obstacle_Pilihan" parent="." unique_id=788662175 instance=ExtResource("16_2cqfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 195.55994, 0.47937298, 0.16065276)
+[node name="Obstacle_Kasih_Jalan" parent="." unique_id=1771976856 instance=ExtResource("7_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.267624, 0, 0.05823922)
 
-[node name="TypingPrompt" parent="Obstacle_Pilihan" index="3" unique_id=94770377]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
-modulate = Color(1, 1, 1, 1)
-target_phrase = "JUMP / SPEEDBOOST"
+[node name="CollisionShape3D" parent="Obstacle_Kasih_Jalan/ObstacleHitbox" parent_id_path=PackedInt32Array(1771976856, 1393558703) index="0" unique_id=464020481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1812305, -2.6907504, 0)
 
-[node name="Obstacle_SpineRolling" parent="." unique_id=649545288 instance=ExtResource("15_vivmo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.4814, 0.43701053, 0.11742234)
+[node name="TypingPrompt" parent="Obstacle_Kasih_Jalan" index="3" unique_id=94770377]
+target_phrase = "OPEN DOM"
 
-[node name="StartArea" parent="Obstacle_SpineRolling" index="2" unique_id=502481537]
-transform = Transform3D(-0.010925581, 0, -0.99994034, 0, 1, 0, 0.99994034, 0, -0.010925581, 0, 0, 0)
+[node name="Obstacle_Base2" parent="." unique_id=1839650915 instance=ExtResource("10_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.25131, 0.64516973, -0.048383713)
 
-[node name="CollisionShape3D" parent="Obstacle_SpineRolling/StartArea" index="0" unique_id=913707147]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9237671, 7.1502333)
+[node name="TypingPrompt" parent="Obstacle_Base2" index="3" unique_id=94770377]
+target_phrase = "ANOTHER ONE"
 
 [editable path="ScreenFader"]
 [editable path="Obstacle_Base"]
+[editable path="Obstacle_Jump_Biasa"]
+[editable path="CameraStopArea2"]
+[editable path="Obstacle_Kasih_Jalan"]
 [editable path="Obstacle_Base2"]
-[editable path="Obstacle_kasih_jalan"]
-[editable path="Obstacle_Base3"]
-[editable path="Obstacle_Speedboost"]
-[editable path="Obstacle_Pilihan"]
-[editable path="Obstacle_SpineRolling"]
-[editable path="Obstacle_SpineRolling/Spine/barrel"]
