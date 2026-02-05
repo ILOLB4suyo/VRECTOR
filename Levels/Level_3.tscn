@@ -10,7 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bh8fyuc5iohmx" path="res://scene/Obstacle_kasih_jalan.tscn" id="8_5i5cj"]
 [ext_resource type="Script" uid="uid://c222wv16rqmvo" path="res://scripts/obstacle_kasih_jalan.gd" id="9_b7oya"]
 [ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="10_pcetg"]
-[ext_resource type="Script" uid="uid://ddnfmimkxupbx" path="res://scripts/CameraStopArea.gd" id="11_vq0cm"]
+[ext_resource type="Script" path="res://scripts/CameraStopArea.gd" id="11_vq0cm"]
+[ext_resource type="Texture2D" uid="uid://drpahn7imv30x" path="res://scene/backgroundgame.jpg" id="12_vkhu4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
@@ -190,6 +191,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.557274, 0.35950923, 0)
 size = Vector3(12.526855, 1, 1)
 
 [node name="TypingPrompt" parent="Obstacle_kasih_jalan" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
 target_phrase = "JALAND"
 
 [node name="AchieveSFX" parent="Obstacle_kasih_jalan/TypingPrompt" index="1" unique_id=852373413]
@@ -228,6 +231,10 @@ mesh = SubResource("BoxMesh_4c57u")
 [node name="Obstacle_Base3" parent="." unique_id=1102102696 instance=ExtResource("10_pcetg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.433239, 0.27642298, -0.10836077)
 
+[node name="TypingPrompt" parent="Obstacle_Base3" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
+
 [node name="CameraStopArea" type="Area3D" parent="." unique_id=2137331327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.989746, 0, 0)
 script = ExtResource("11_vq0cm")
@@ -236,6 +243,10 @@ script = ExtResource("11_vq0cm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1468506, 0.95957124, 0.22314453)
 shape = SubResource("BoxShape3D_ycdy4")
 debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1903663930]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 69.207695, 13.020451, -43.788498)
+texture = ExtResource("12_vkhu4")
 
 [editable path="Obstacle_Base"]
 [editable path="Obstacle_Base2"]

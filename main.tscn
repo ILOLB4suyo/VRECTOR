@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bh8fyuc5iohmx" path="res://scene/Obstacle_kasih_jalan.tscn" id="7_5vw27"]
 [ext_resource type="Script" uid="uid://c222wv16rqmvo" path="res://scripts/obstacle_kasih_jalan.gd" id="8_kek77"]
 [ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="10_4c57u"]
-[ext_resource type="Script" uid="uid://ddnfmimkxupbx" path="res://scripts/CameraStopArea.gd" id="11_efxa6"]
+[ext_resource type="Script" path="res://scripts/CameraStopArea.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://bwdjrogetrqul" path="res://LevelEndArea.gd" id="12_dg77c"]
 [ext_resource type="PackedScene" uid="uid://ct0f1ow5n3xm2" path="res://scene/Obstacle_Speedboost.tscn" id="14_w48qg"]
 [ext_resource type="PackedScene" uid="uid://uwjstab2x00k" path="res://scene/Obstacle_SpineRolling.tscn" id="15_vivmo"]
@@ -31,20 +31,37 @@ background_mode = 1
 background_color = Color(0.43476555, 0.5112999, 0.9320936, 1)
 ambient_light_color = Color(0.9682787, 0.53369856, 0.5930169, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
+size = Vector3(12.559809, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4c57u"]
+size = Vector3(12.478607, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+albedo_color = Color(0, 0.5661477, 0.5286518, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
+size = Vector3(4.662269, 2.6748047, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
+size = Vector3(3.2925415, 1, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_5vw27"]
 size = Vector3(8, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vivmo"]
 size = Vector3(8.123276, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_2cqfq"]
 size = Vector3(10.855347, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yaehf"]
 albedo_color = Color(0.7626621, 8.143723e-05, 0.6211426, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4c57u"]
 size = Vector3(10.92, 1, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_w48qg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycdy4"]
 size = Vector3(1.7355347, 3.5062256, 1.4462891)
@@ -251,6 +268,21 @@ environment = SubResource("Environment_ig7tw")
 [node name="Obstacle_Base" parent="." unique_id=1114171317 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 26.279114, 0.42276496, -10.501429)
 
+[node name="CollisionShape3D" parent="Obstacle_Base/ObstacleHitbox" parent_id_path=PackedInt32Array(1114171317, 1393558703) index="0" unique_id=464020481]
+shape = SubResource("BoxShape3D_5vw27")
+
+[node name="CollisionShape3D" parent="Obstacle_Base/StaticBody3D" parent_id_path=PackedInt32Array(1114171317, 1288428675) index="0" unique_id=1117011116]
+shape = SubResource("BoxShape3D_4c57u")
+
+[node name="CSGBox3D" parent="Obstacle_Base/StaticBody3D" parent_id_path=PackedInt32Array(1114171317, 1288428675) index="1" unique_id=1443130602]
+material = SubResource("StandardMaterial3D_kek77")
+
+[node name="CollisionShape3D" parent="Obstacle_Base/SlowmoArea" parent_id_path=PackedInt32Array(1114171317, 676845770) index="0" unique_id=692299938]
+shape = SubResource("BoxShape3D_kek77")
+
+[node name="CollisionShape3D" parent="Obstacle_Base/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1114171317, 1789275130) index="0" unique_id=569269197]
+shape = SubResource("BoxShape3D_272bh")
+
 [node name="AchieveSFX" parent="Obstacle_Base/TypingPrompt" parent_id_path=PackedInt32Array(1114171317, 94770377) index="1" unique_id=852373413]
 process_mode = 3
 volume_db = 80.0
@@ -263,20 +295,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.95827, 0.42921162, 0.26689
 
 [node name="CollisionShape3D" parent="Obstacle_Base2/ObstacleHitbox" parent_id_path=PackedInt32Array(2114639041, 1393558703) index="0" unique_id=464020481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5915413, -2.9914026, -0.14335561)
+shape = SubResource("BoxShape3D_5vw27")
 
 [node name="CollisionShape3D" parent="Obstacle_Base2/StaticBody3D" parent_id_path=PackedInt32Array(2114639041, 1288428675) index="0" unique_id=1117011116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4017334, -3.3280478, -0.17864025)
+shape = SubResource("BoxShape3D_4c57u")
 
 [node name="CSGBox3D" parent="Obstacle_Base2/StaticBody3D" parent_id_path=PackedInt32Array(2114639041, 1288428675) index="1" unique_id=1443130602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.906456, -3.3667111, -0.23432076)
 use_collision = true
 size = Vector3(5.2252197, 1, 1)
+material = SubResource("StandardMaterial3D_kek77")
 
 [node name="SlowmoArea" parent="Obstacle_Base2" index="2" unique_id=676845770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0512085, 0.47901487, 0)
 
+[node name="CollisionShape3D" parent="Obstacle_Base2/SlowmoArea" index="0" unique_id=692299938]
+shape = SubResource("BoxShape3D_kek77")
+
 [node name="TypingPrompt" parent="Obstacle_Base2" index="3" unique_id=94770377]
 target_phrase = "BUKA CELANA"
+
+[node name="CollisionShape3D" parent="Obstacle_Base2/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(2114639041, 1789275130) index="0" unique_id=569269197]
+shape = SubResource("BoxShape3D_272bh")
 
 [node name="Obstacle_kasih_jalan" parent="." unique_id=532910985 instance=ExtResource("7_5vw27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.78419, 0.5250759, 0.42309284)
@@ -285,19 +326,30 @@ platform_speed = 13.0
 
 [node name="CollisionShape3D" parent="Obstacle_kasih_jalan/ObstacleHitbox" parent_id_path=PackedInt32Array(532910985, 1393558703) index="0" unique_id=464020481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.304161, -3.0918374, 0)
+shape = SubResource("BoxShape3D_5vw27")
 
 [node name="StaticBody3D" parent="Obstacle_kasih_jalan" index="1" unique_id=1288428675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5603466, -2.9924374, 0)
 
 [node name="CollisionShape3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="0" unique_id=1117011116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5418243, 0.3207221, 0)
+shape = SubResource("BoxShape3D_4c57u")
 
 [node name="CSGBox3D" parent="Obstacle_kasih_jalan/StaticBody3D" index="1" unique_id=1443130602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.557274, 0.35950923, 0)
 size = Vector3(12.526855, 1, 1)
+material = SubResource("StandardMaterial3D_kek77")
+
+[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/SlowmoArea" parent_id_path=PackedInt32Array(532910985, 676845770) index="0" unique_id=692299938]
+shape = SubResource("BoxShape3D_kek77")
 
 [node name="TypingPrompt" parent="Obstacle_kasih_jalan" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
 target_phrase = "JALAND"
+
+[node name="CollisionShape3D" parent="Obstacle_kasih_jalan/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(532910985, 1789275130) index="0" unique_id=569269197]
+shape = SubResource("BoxShape3D_272bh")
 
 [node name="AchieveSFX" parent="Obstacle_kasih_jalan/TypingPrompt" index="1" unique_id=852373413]
 volume_db = 0.0
@@ -314,7 +366,7 @@ mesh = SubResource("BoxMesh_5vw27")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform1" unique_id=1630058696]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4322433, -4.8160343, 0)
-shape = SubResource("BoxShape3D_kek77")
+shape = SubResource("BoxShape3D_vivmo")
 
 [node name="PlatformTarget13" type="Node3D" parent="Obstacle_kasih_jalan" unique_id=133952520]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.836624, 1.8320823, 0)
@@ -324,16 +376,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.353595, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1330219848]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.248512, 0, 0)
-shape = SubResource("BoxShape3D_5vw27")
+shape = SubResource("BoxShape3D_2cqfq")
 debug_color = Color(0, 0, 0, 0.41960785)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1978854187]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.275066, 0, 0)
-material_override = SubResource("StandardMaterial3D_kek77")
+material_override = SubResource("StandardMaterial3D_yaehf")
 mesh = SubResource("BoxMesh_4c57u")
 
 [node name="Obstacle_Base3" parent="." unique_id=1102102696 instance=ExtResource("10_4c57u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.433239, 0.27642298, -0.10836077)
+
+[node name="CollisionShape3D" parent="Obstacle_Base3/ObstacleHitbox" parent_id_path=PackedInt32Array(1102102696, 1393558703) index="0" unique_id=464020481]
+shape = SubResource("BoxShape3D_5vw27")
+
+[node name="CollisionShape3D" parent="Obstacle_Base3/StaticBody3D" parent_id_path=PackedInt32Array(1102102696, 1288428675) index="0" unique_id=1117011116]
+shape = SubResource("BoxShape3D_4c57u")
+
+[node name="CSGBox3D" parent="Obstacle_Base3/StaticBody3D" parent_id_path=PackedInt32Array(1102102696, 1288428675) index="1" unique_id=1443130602]
+material = SubResource("StandardMaterial3D_kek77")
+
+[node name="CollisionShape3D" parent="Obstacle_Base3/SlowmoArea" parent_id_path=PackedInt32Array(1102102696, 676845770) index="0" unique_id=692299938]
+shape = SubResource("BoxShape3D_kek77")
+
+[node name="TypingPrompt" parent="Obstacle_Base3" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
+font = SubResource("FontVariation_w48qg")
+outline_size = 50
+
+[node name="CollisionShape3D" parent="Obstacle_Base3/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1102102696, 1789275130) index="0" unique_id=569269197]
+shape = SubResource("BoxShape3D_272bh")
 
 [node name="CameraStopArea" type="Area3D" parent="." unique_id=2137331327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.989746, 5.854616, 0)
