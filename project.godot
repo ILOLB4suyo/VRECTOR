@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="real_vector"
-run/main_scene="uid://kpt4c341y7yw"
+run/main_scene="uid://brligjjykx3if"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

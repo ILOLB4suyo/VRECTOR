@@ -13,9 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="10_4c57u"]
 [ext_resource type="Script" path="res://scripts/CameraStopArea.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://bwdjrogetrqul" path="res://LevelEndArea.gd" id="12_dg77c"]
-[ext_resource type="PackedScene" uid="uid://ct0f1ow5n3xm2" path="res://scene/Obstacle_Speedboost.tscn" id="14_w48qg"]
-[ext_resource type="PackedScene" uid="uid://uwjstab2x00k" path="res://scene/Obstacle_SpineRolling.tscn" id="15_vivmo"]
-[ext_resource type="PackedScene" uid="uid://f4xpiidpfpcf" path="res://scene/Obstacle_Pilihan.tscn" id="16_2cqfq"]
+[ext_resource type="PackedScene" path="res://scene/Obstacle_Speedboost.tscn" id="14_w48qg"]
+[ext_resource type="PackedScene" path="res://scene/Obstacle_SpineRolling.tscn" id="15_vivmo"]
+[ext_resource type="PackedScene" path="res://scene/Obstacle_Pilihan.tscn" id="16_2cqfq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
@@ -248,7 +248,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("1_ig7tw")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 178.10144, 0.7997756, 0.368999)
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 105.064705, 0.7997756, 0.368999)
 script = ExtResource("2_h2yge")
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
@@ -280,14 +280,18 @@ material = SubResource("StandardMaterial3D_kek77")
 [node name="CollisionShape3D" parent="Obstacle_Base/SlowmoArea" parent_id_path=PackedInt32Array(1114171317, 676845770) index="0" unique_id=692299938]
 shape = SubResource("BoxShape3D_kek77")
 
+[node name="TypingPrompt" parent="Obstacle_Base" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
+
 [node name="CollisionShape3D" parent="Obstacle_Base/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(1114171317, 1789275130) index="0" unique_id=569269197]
 shape = SubResource("BoxShape3D_272bh")
 
-[node name="AchieveSFX" parent="Obstacle_Base/TypingPrompt" parent_id_path=PackedInt32Array(1114171317, 94770377) index="1" unique_id=852373413]
+[node name="AchieveSFX" parent="Obstacle_Base/TypingPrompt" index="1" unique_id=852373413]
 process_mode = 3
 volume_db = 80.0
 
-[node name="TypingTimer" parent="Obstacle_Base/TypingPrompt" parent_id_path=PackedInt32Array(1114171317, 94770377) index="2" unique_id=1883947583]
+[node name="TypingTimer" parent="Obstacle_Base/TypingPrompt" index="2" unique_id=1883947583]
 script = ExtResource("7_4c57u")
 
 [node name="Obstacle_Base2" parent="." unique_id=2114639041 instance=ExtResource("6_7mycd")]
@@ -314,6 +318,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0512085, 0.47901487, 0)
 shape = SubResource("BoxShape3D_kek77")
 
 [node name="TypingPrompt" parent="Obstacle_Base2" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
 target_phrase = "BUKA CELANA"
 
 [node name="CollisionShape3D" parent="Obstacle_Base2/TypingPrompt/Area3D" parent_id_path=PackedInt32Array(2114639041, 1789275130) index="0" unique_id=569269197]
@@ -430,12 +436,16 @@ debug_color = Color(1, 0.14901961, 0, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.9697, 0.6392729, 0.26684618)
 
 [node name="TypingPrompt" parent="Obstacle_Speedboost" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
 target_phrase = "BOOST"
 
 [node name="Obstacle_Pilihan" parent="." unique_id=788662175 instance=ExtResource("16_2cqfq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 195.55994, 0.47937298, 0.16065276)
 
 [node name="TypingPrompt" parent="Obstacle_Pilihan" index="3" unique_id=94770377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21927452, 4.1092124, 0)
+modulate = Color(1, 1, 1, 1)
 target_phrase = "JUMP / SPEEDBOOST"
 
 [node name="Obstacle_SpineRolling" parent="." unique_id=649545288 instance=ExtResource("15_vivmo")]
