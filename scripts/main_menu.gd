@@ -62,4 +62,4 @@ func on_correct_input():
 	await get_tree().create_timer(0.5).timeout
 	
 	# Change to game scene
-	get_tree().change_scene_to_file("res://main.tscn")
+	LevelManager.load_level(0)

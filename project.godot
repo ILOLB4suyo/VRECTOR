@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 AchiveSFX="*uid://df441p5hp5q77"
 LevelManager="*uid://bdfkwvoxvcqa2"
 ScreenFader="*uid://bbpl6brbr7wg2"
+GlobalSFX="*uid://ctvny5pobtk33"
 
 [filesystem]
 
