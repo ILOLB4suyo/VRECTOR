@@ -162,8 +162,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.211815, 9.731819, 0.155740
 [node name="ObstacleHitbox" parent="Obstacle_Kasih_Jalan" index="0" unique_id=1393558703]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7825794, -2.9238925, 0)
 
-[node name="CollisionShape3D" parent="Obstacle_SpineRolling2/StartArea" index="0" unique_id=913707147]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8626451e-09, 0.9237671, 8.526215)
+[node name="CollisionShape3D" parent="Obstacle_Kasih_Jalan/ObstacleHitbox" index="0" unique_id=464020481]
+debug_color = Color(0.96723527, 0.18363097, 0, 0.41960785)
 
 [node name="StaticBody3D" parent="Obstacle_Kasih_Jalan" index="1" unique_id=1288428675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17246437, -2.7418728, 0)
