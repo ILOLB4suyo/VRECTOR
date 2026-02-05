@@ -8,9 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://d0r2ghibywle6" path="res://scene/Obstacle_Base.tscn" id="6_jw1dd"]
 [ext_resource type="Script" uid="uid://df441p5hp5q77" path="res://scripts/AchiveSFX.gd" id="7_0xt02"]
 [ext_resource type="PackedScene" uid="uid://bh8fyuc5iohmx" path="res://scene/Obstacle_kasih_jalan.tscn" id="8_q0xi3"]
-[ext_resource type="Script" uid="uid://c222wv16rqmvo" path="res://scripts/obstacle_kasih_jalan.gd" id="9_nwnlh"]
 [ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="10_e3avg"]
-[ext_resource type="Script" path="res://scripts/CameraStopArea.gd" id="11_0rx21"]
+[ext_resource type="Script" uid="uid://ddnfmimkxupbx" path="res://scripts/CameraStopArea.gd" id="11_0rx21"]
 [ext_resource type="PackedScene" uid="uid://osb6vn1qt7qi" path="res://scene/obstacle_panjat_tali.tscn" id="12_i12my"]
 [ext_resource type="Texture2D" uid="uid://drpahn7imv30x" path="res://scene/backgroundgame.jpg" id="13_xhmcf"]
 [ext_resource type="PackedScene" path="res://scene/Obstacle_SpineRolling.tscn" id="14_p0224"]
@@ -142,7 +141,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("1_46pvi")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.399666, 0, -0.0688926)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.14778, 0, -0.0688926)
 script = ExtResource("2_fvkd4")
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
@@ -217,7 +216,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3287964, -0.5553403, 0)
 [node name="AchieveSFX" parent="Obstacle_kasih_jalan/TypingPrompt" index="1" unique_id=852373413]
 volume_db = 0.0
 
-[node name="PlatformTarget" type="Marker3D" parent="Obstacle_kasih_jalan" unique_id=1912831893]
+[node name="PlatformTarget2" type="Marker3D" parent="Obstacle_kasih_jalan" unique_id=1912831893]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45677948, -0.73534966, 0)
 
 [node name="Platform1" type="StaticBody3D" parent="Obstacle_kasih_jalan" unique_id=33894597]
@@ -234,15 +233,15 @@ shape = SubResource("BoxShape3D_xhmcf")
 [node name="PlatformTarget13" type="Node3D" parent="Obstacle_kasih_jalan" unique_id=133952520]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.836624, 1.8320823, 0)
 
-[node name="Platform" type="CharacterBody3D" parent="Obstacle_kasih_jalan" unique_id=788766471]
+[node name="Platform2" type="CharacterBody3D" parent="Obstacle_kasih_jalan" unique_id=788766471]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.353595, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1330219848]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_kasih_jalan/Platform2" unique_id=1330219848]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.248512, 0, 0)
 shape = SubResource("BoxShape3D_p0224")
 debug_color = Color(0, 0, 0, 0.41960785)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle_kasih_jalan/Platform" unique_id=1978854187]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle_kasih_jalan/Platform2" unique_id=1978854187]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.275066, 0, 0)
 material_override = SubResource("StandardMaterial3D_f8p00")
 mesh = SubResource("BoxMesh_4c57u")
