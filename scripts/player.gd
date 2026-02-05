@@ -13,7 +13,7 @@ var is_climbing := false
 func force_jump():
 	velocity.y = jump_velocity
 
-func force_jump_extra(multiplier: float = 1.5):
+func force_jump_extra(multiplier: float = 2.5):
 	velocity.y = jump_velocity * multiplier
 
 	if jump_sfx:
