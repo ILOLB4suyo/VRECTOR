@@ -154,9 +154,6 @@ roll_speed = 13.0
 [node name="StartArea" parent="Obstacle_SpineRolling" index="2" unique_id=502481537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7252903e-09, 0, 9.199193)
 
-[node name="CollisionShape3D" parent="Obstacle_SpineRolling/StartArea" index="0" unique_id=913707147]
-debug_color = Color(0.9977123, 0, 0.17001125, 0.41960785)
-
 [node name="Obstacle_Speedboost" parent="." unique_id=728817210 instance=ExtResource("14_gqkj3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.68386, 0.47361135, 0.14272249)
 speed_multiplier = 2.5
@@ -170,7 +167,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.1329613, 3.8694425)
 
 [node name="CollisionShape3D" parent="Obstacle_SpineRolling2/StartArea" index="0" unique_id=913707147]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8626451e-09, 0.9237671, 8.526215)
-debug_color = Color(0.9977123, 0, 0.17001125, 0.41960785)
 
 [editable path="ScreenFader"]
 [editable path="CameraStopArea2"]
