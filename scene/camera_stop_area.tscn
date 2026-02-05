@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dircvdfu8i0p1"]
+
+[ext_resource type="Script" path="res://scripts/CameraStopArea.gd" id="1_vjswc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ycdy4"]
+size = Vector3(1.7355347, 3.5062256, 1.4462891)
+
+[node name="CameraStopArea" type="Area3D" unique_id=719171326]
+script = ExtResource("1_vjswc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=867923425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1468506, 0.95957124, 0.22314453)
+shape = SubResource("BoxShape3D_ycdy4")
+debug_color = Color(1, 0, 0, 0.41960785)
