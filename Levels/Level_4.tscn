@@ -139,7 +139,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("2_7emau")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 19.846195, 0.5697098, 0.368999)
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 19.846195, 2.1934972, -0.26981485)
 script = ExtResource("3_a03si")
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
@@ -239,7 +239,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.281105, 0.5105952, 0.16991
 climb_height = 11
 
 [node name="CollisionShape3D" parent="Obstacle_Base/SlowmoArea" parent_id_path=PackedInt32Array(1519010700, 676845770) index="0" unique_id=692299938]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3281937, 0.83740234, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6049995, 0.83740234, 0)
 
 [node name="TypingPrompt" parent="Obstacle_Base" index="3" unique_id=94770377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0203018, 2.8508391, 0.15519238)
@@ -259,7 +259,7 @@ roll_direction = -1
 transform = Transform3D(0.051429655, 0, -0.9986766, 0, 1, 0, 0.9986766, 0, 0.051429655, -22.767063, 0, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1028030479]
-transform = Transform3D(2.2664995, 0, 0, 0, 2.5809653, 0, 0, 0, 2, 141.0478, 12.866346, -43.774292)
+transform = Transform3D(2.2664995, 0, 0, 0, 2.5809653, 0, 0, 0, 2, 141.20677, 13.02934, -43.71615)
 texture = ExtResource("14_xqub4")
 
 [editable path="ScreenFader"]

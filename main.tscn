@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://dsg2y4i3584ua" path="res://scene/Player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bbpl6brbr7wg2" path="res://scene/ScreenFader.tscn" id="1_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://bh7w8v577cly0" path="res://scene/camera_rig.tscn" id="2_0xm2m"]
-[ext_resource type="Script" uid="uid://b4alnyj007jv4" path="res://scripts/player.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://b1aq20l1d1ftk" path="res://scripts/camera_rig.gd" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://b518nilo4io3v" path="res://Assets/Music/sfx/jump..ogg" id="5_kek77"]
 [ext_resource type="PackedScene" uid="uid://d0r2ghibywle6" path="res://scene/Obstacle_Base.tscn" id="6_7mycd"]
@@ -102,8 +101,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("1_ig7tw")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 5.9786577, 0.7997756, 0.368999)
-script = ExtResource("2_h2yge")
+transform = Transform3D(1.0012187, 0, 0, 0, 1.0012187, 0, 0, 0, 1.0012187, 5.9786577, 2.1386042, -0.123910785)
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
 stream = ExtResource("5_kek77")
@@ -208,6 +206,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.267624, 0, 0.05823922)
 
 [node name="CollisionShape3D" parent="Obstacle_Kasih_Jalan/ObstacleHitbox" parent_id_path=PackedInt32Array(1771976856, 1393558703) index="0" unique_id=464020481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1812305, -2.6907504, 0)
+debug_color = Color(0.96723527, 0.18363097, 0, 0.41960785)
 
 [node name="TypingPrompt" parent="Obstacle_Kasih_Jalan" index="3" unique_id=94770377]
 target_phrase = "OPEN DOM"
@@ -219,6 +218,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.25131, 0.64516973, -0.0483
 target_phrase = "ANOTHER ONE"
 
 [editable path="ScreenFader"]
+[editable path="Player"]
 [editable path="Obstacle_Base"]
 [editable path="Obstacle_Jump_Biasa"]
 [editable path="CameraStopArea2"]
