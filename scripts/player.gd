@@ -108,3 +108,12 @@ func play_fall():
 func play_climb():
 	if animation_player.current_animation != "climb":
 		animation_player.play("climb")
+func die():
+	can_move = false
+	velocity = Vector3.ZERO
+	play_fall()
+	
+	# Hilangkan visual + collision
+	hide()
+	set_physics_process(false)
+	set_process(false)

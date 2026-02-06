@@ -51,19 +51,12 @@ func handle_game_over(player):
 	print("💀 GAME OVER - Player kena obstacle")
 	
 	Engine.time_scale = 1.0
-	player.can_move = false
 	
-	# Mainkan animasi fall sebentar
-	if player.has_method("play_fall"):
-		player.play_fall()
+	if player.has_method("die"):
+		player.die()
 	
-	# Mainkan SFX jika ada
 	if fail_sfx:
 		fail_sfx.play()
-		await fail_sfx.finished
 	
-	# Delay sebentar supaya animasi kelihatan
-	await get_tree().create_timer(0.5).timeout
-	
-	# Reload scene
+	await get_tree().create_timer(0.7).timeout
 	get_tree().reload_current_scene()

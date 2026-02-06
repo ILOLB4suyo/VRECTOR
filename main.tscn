@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dt1eqcedlw3lu" path="res://scene/obstacle_jump_biasa.tscn" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://ddnfmimkxupbx" path="res://scripts/CameraStopArea.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://bwdjrogetrqul" path="res://LevelEndArea.gd" id="12_dg77c"]
-[ext_resource type="PackedScene" uid="uid://cq0107l7cxgl5" path="res://scene/platform_scaffolding.tscn" id="14_w48qg"]
+[ext_resource type="PackedScene" path="res://scene/platform_scaffolding.tscn" id="14_w48qg"]
 [ext_resource type="PackedScene" uid="uid://sl32apid3m8k" path="res://scene/gear_mini.tscn" id="15_vivmo"]
 [ext_resource type="Texture2D" uid="uid://drpahn7imv30x" path="res://scene/backgroundgame.jpg" id="16_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://bmmhtdvxvvmsr" path="res://scene/camera_stop_area.tscn" id="18_cegan"]
@@ -25,7 +25,7 @@ background_color = Color(0.43476555, 0.5112999, 0.9320936, 1)
 ambient_light_color = Color(0.9682787, 0.53369856, 0.5930169, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
-size = Vector3(12.559809, 1, 1)
+size = Vector3(12.559809, 1, 2.946289)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c57u"]
 size = Vector3(12.478607, 1, 1)
@@ -34,7 +34,7 @@ size = Vector3(12.478607, 1, 1)
 albedo_color = Color(0, 0.5661477, 0.5286518, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
-size = Vector3(4.662269, 2.6748047, 1)
+size = Vector3(4.662269, 2.6748047, 1.9523926)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
 size = Vector3(3.2925415, 1, 1)
@@ -144,7 +144,7 @@ script = ExtResource("7_4c57u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.433239, 0.27642298, -0.10836077)
 
 [node name="CollisionShape3D" parent="Obstacle_Jump_Biasa/ObstacleHitbox" parent_id_path=PackedInt32Array(1102102696, 1393558703) index="0" unique_id=464020481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1812305, -6.132631, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7668781, -4.6201034, 0.119772434)
 shape = SubResource("BoxShape3D_5vw27")
 debug_color = Color(0, 0, 0, 0.41960785)
 
@@ -159,7 +159,7 @@ transparency = 1.0
 material = SubResource("StandardMaterial3D_kek77")
 
 [node name="CollisionShape3D" parent="Obstacle_Jump_Biasa/SlowmoArea" parent_id_path=PackedInt32Array(1102102696, 676845770) index="0" unique_id=692299938]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6319771, 0.83740234, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6319771, 0.83740234, 0.18444824)
 shape = SubResource("BoxShape3D_kek77")
 
 [node name="TypingPrompt" parent="Obstacle_Jump_Biasa" index="3" unique_id=94770377]
@@ -200,7 +200,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2073936, 1.740757, -0.07916
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.267624, 0, 0.05823922)
 
 [node name="CollisionShape3D" parent="Obstacle_Kasih_Jalan/ObstacleHitbox" parent_id_path=PackedInt32Array(1771976856, 1393558703) index="0" unique_id=464020481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1812305, -2.6907504, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6084137, -2.6907504, 0)
 debug_color = Color(0.96723527, 0.18363097, 0, 0.41960785)
 
 [node name="TypingPrompt" parent="Obstacle_Kasih_Jalan" index="3" unique_id=94770377]
@@ -216,7 +216,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.25131, 0.64516973, -0.0483
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7825794, -2.671001, 0)
 
 [node name="CollisionShape3D" parent="Obstacle_Base2/ObstacleHitbox" index="0" unique_id=464020481]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.954586, -3.1844115, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.318245, -2.7912688, -0.42037964)
 
 [node name="StaticBody3D" parent="Obstacle_Base2" index="1" unique_id=1288428675]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5603466, -2.5522919, 0)

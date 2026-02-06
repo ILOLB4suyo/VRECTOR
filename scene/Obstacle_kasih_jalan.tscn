@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c222wv16rqmvo" path="res://scripts/obstacle_kasih_jalan.gd" id="2_e2qcy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
-size = Vector3(12.559809, 1, 1)
+size = Vector3(13.414182, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c57u"]
 size = Vector3(12.478607, 1, 1)
@@ -35,6 +35,7 @@ platform_speed = 13.0
 [node name="CollisionShape3D" parent="ObstacleHitbox" parent_id_path=PackedInt32Array(1393558703) index="0" unique_id=464020481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1812305, -3.038546, 0)
 shape = SubResource("BoxShape3D_5vw27")
+debug_color = Color(0.96723527, 0.18363097, 0, 0.41960785)
 
 [node name="CollisionShape3D" parent="StaticBody3D" parent_id_path=PackedInt32Array(1288428675) index="0" unique_id=1117011116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4017334, -3.3889937, 0)

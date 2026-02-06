@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://ckv8sgw2ccsdu" path="res://Assets/Music/sfx/achieve_goal.ogg" id="5_mu047"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5vw27"]
-size = Vector3(50.964264, 1.2936401, 1.638794)
+size = Vector3(64.777725, 2.6836395, 3.06839)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c57u"]
 size = Vector3(12.478607, 1, 1)
@@ -17,7 +17,7 @@ size = Vector3(12.478607, 1, 1)
 albedo_color = Color(0, 0.5661477, 0.5286518, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kek77"]
-size = Vector3(7.6449523, 2.9326172, 1)
+size = Vector3(7.6449523, 4.989258, 2.0927734)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_272bh"]
 size = Vector3(3.2925415, 1, 1)
