@@ -26,7 +26,6 @@ albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
 
 [sub_resource type="Environment" id="Environment_ig7tw"]
 background_mode = 1
-background_color = Color(1, 1, 1, 1)
 ambient_light_color = Color(0.9682787, 0.53369856, 0.5930169, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycdy4"]
@@ -638,7 +637,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="TakopiRope" parent="." unique_id=247521321 instance=ExtResource("17_jiacp")]
-transform = Transform3D(-0.0054629017, 0, -0.9999851, 0, 1, 0, 0.9999851, 0, -0.0054629017, 43.26461, 3.8776808, 0.074919574)
+transform = Transform3D(0.99998224, 0, -0.0059690126, 0, 1, 0, 0.0059690126, 0, 0.99998224, 43.26461, 3.8776808, 0.074919574)
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="." unique_id=359410146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 232.81738, 9.903212, 0.008749247)
@@ -885,6 +884,9 @@ texture = ExtResource("20_o1om3")
 [node name="Obstacle_Panjat_tali2" parent="." unique_id=2098866154 instance=ExtResource("13_ngdf5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.815228, 1.6362734, 0.23636937)
 climb_height = 11
+
+[node name="CollisionShape3D" parent="Obstacle_Panjat_tali2/SlowmoArea" parent_id_path=PackedInt32Array(2098866154, 676845770) index="0" unique_id=692299938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36985397, 0.83740234, 0)
 
 [editable path="ScreenFader"]
 [editable path="Obstacle_Pilihan"]
