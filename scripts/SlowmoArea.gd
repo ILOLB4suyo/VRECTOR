@@ -19,6 +19,7 @@ func _on_body_entered(body):
 
 	slowmo_active = true
 	Engine.time_scale = slowmo_scale
+	GameState.is_slowmo = true
 
 	var camera_rig = body.get_node("CameraRig")
 	if camera_rig:
@@ -33,6 +34,7 @@ func _on_body_entered(body):
 func _on_typing_finished(success: bool):
 	Engine.time_scale = 1.0
 	slowmo_active = false
+	GameState.is_slowmo = false
 
 	if success:
 		AchiveSFX.play()

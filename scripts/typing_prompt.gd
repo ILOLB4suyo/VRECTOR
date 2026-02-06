@@ -68,6 +68,8 @@ func start_typing():
 
 func enter_typing_mode():
 	is_typing = true
+	GameState.is_typing_active = true
+
 	already_finished = false
 	typed_text = ""
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -77,21 +79,24 @@ func enter_typing_mode():
 	if player:
 		player.can_move = false
 
+
+
 func exit_typing_mode():
 	is_typing = false
+	GameState.is_typing_active = false
+
 	timeout_timer.stop()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	modulate = Color.WHITE
-	
+
 	if music and music.playing:
 		music.stop()
-
 
 	var player := get_tree().get_first_node_in_group("player")
 	if player:
 		player.can_move = true
-		
-	
+
+
 
 
 func _input(event):
@@ -104,8 +109,9 @@ func _input(event):
 	if event is InputEventKey and event.pressed and not event.echo:
 
 		if event.keycode == KEY_ESCAPE:
-			exit_typing_mode()
+			print("ESC DIABAIKAN SAAT TYPING")
 			return
+
 
 		if event.keycode == KEY_BACKSPACE:
 			if typed_text.length() > 0:
@@ -148,6 +154,7 @@ func _process(delta: float) -> void:
 		return
 
 	var real_delta: float = delta / float(Engine.time_scale)
+	
 
 	time_left -= real_delta
 	time_left = max(time_left, 0.0)

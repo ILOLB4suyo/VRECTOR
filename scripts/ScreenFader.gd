@@ -5,11 +5,14 @@ var fade_time := 1.5
 
 func fade_out():
 	print("FADE OUT START")
-
+	
+	GameState.is_fading = true
 	rect.visible = true
 	var c := rect.color
 	c.a = 0.0
 	rect.color = c
+	
+	
 
 	var tween := create_tween()
 	tween.tween_property(
@@ -41,4 +44,7 @@ func fade_in():
 	await tween.finished
 
 	rect.visible = false
+	
+	GameState.is_fading = false
+	
 	print("FADE IN DONE")
