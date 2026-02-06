@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://uwjstab2x00k"]
 
-[ext_resource type="Script" uid="uid://bmduwhynjr2if" path="res://scripts/Obstacle_SpineRolling.gd" id="1_778m7"]
-[ext_resource type="PackedScene" uid="uid://cwy1irl2sa004" path="res://import_examples/barrel/barrel.glb" id="2_4f3pg"]
+[ext_resource type="Script" path="res://scripts/Obstacle_SpineRolling.gd" id="1_778m7"]
+[ext_resource type="PackedScene" uid="uid://dlbchtu6o11mv" path="res://Assets/Models/Gear.glb" id="2_kut1s"]
 [ext_resource type="AudioStream" uid="uid://bdhgc53ceab4o" path="res://Assets/Music/sfx/fail.ogg" id="3_kut1s"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4f3pg"]
@@ -32,7 +32,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.40818024, 0)
 shape = SubResource("SphereShape3D_kut1s")
 debug_color = Color(0, 0, 0, 0.41960785)
 
-[node name="barrel" parent="Spine" unique_id=2015879303 instance=ExtResource("2_4f3pg")]
+[node name="Gear" parent="Spine" unique_id=773168002 instance=ExtResource("2_kut1s")]
+transform = Transform3D(-0.0021642148, 0, -0.9999977, 0, 1, 0, 0.9999977, 0, -0.0021642148, 0.04506936, -0.03789711, -0.045485854)
 
 [node name="FailSFX" type="AudioStreamPlayer" parent="." unique_id=339710690]
 stream = ExtResource("3_kut1s")
@@ -45,4 +46,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9237671, 4.2241907)
 shape = SubResource("BoxShape3D_kut1s")
 debug_color = Color(0.9977123, 0, 0.17001125, 0.41960785)
 
-[editable path="Spine/barrel"]
+[editable path="Spine/Gear"]

@@ -197,6 +197,7 @@ use_collision = true
 size = Vector3(7.10588, 1, 1.6572266)
 
 [editable path="ScreenFader"]
+[editable path="Player"]
 [editable path="CameraStopArea2"]
 [editable path="Obstacle_Manjat"]
 [editable path="Obstacle_Base"]

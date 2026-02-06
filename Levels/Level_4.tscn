@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://uwjstab2x00k" path="res://scene/Obstacle_SpineRolling.tscn" id="13_ef48p"]
 [ext_resource type="PackedScene" uid="uid://ct0f1ow5n3xm2" path="res://scene/Obstacle_Speedboost.tscn" id="14_gqkj3"]
 [ext_resource type="Texture2D" uid="uid://drpahn7imv30x" path="res://scene/backgroundgame.jpg" id="14_xqub4"]
+[ext_resource type="PackedScene" uid="uid://cq0107l7cxgl5" path="res://scene/Platform_Scaffolding.tscn" id="15_7emau"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
@@ -35,7 +36,7 @@ size = Vector3(1.2939453, 3.9180908, 1.5878906)
 layer = 100
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1802738871]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.954739, -0.2640075, 0.08325195)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.954739, -0.2640075, -7.327214)
 material_override = SubResource("StandardMaterial3D_0xm2m")
 use_collision = true
 size = Vector3(27.837942, 1, 1.6572266)
@@ -113,12 +114,6 @@ use_collision = true
 collision_layer = 4
 collision_mask = 4
 size = Vector3(4.165532, 1.0152664, 7.572754)
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1652466818]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.940216, -0.2640075, 0.08325195)
-material_override = SubResource("StandardMaterial3D_0xm2m")
-use_collision = true
-size = Vector3(30.332409, 1, 1.6572266)
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="." unique_id=805091678]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.90338, 7.703744, 0.08325195)
@@ -203,9 +198,6 @@ roll_speed = 12.0
 collision_layer = 5
 collision_mask = 5
 
-[node name="barrel_large" parent="Obstacle_SpineRolling2/Spine/barrel" parent_id_path=PackedInt32Array(2126261418, 2015879303) index="0" unique_id=1932309040]
-layers = 5
-
 [node name="StartArea" parent="Obstacle_SpineRolling2" index="2" unique_id=502481537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.1329613, 3.8694425)
 
@@ -262,13 +254,49 @@ transform = Transform3D(0.051429655, 0, -0.9986766, 0, 1, 0, 0.9986766, 0, 0.051
 transform = Transform3D(2.2664995, 0, 0, 0, 2.5809653, 0, 0, 0, 2, 141.0478, 12.866346, -43.774292)
 texture = ExtResource("14_xqub4")
 
+[node name="Platform_Scaffolding" parent="." unique_id=1999263622 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.839752, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding2" parent="." unique_id=877216551 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.745096, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding3" parent="." unique_id=599443523 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.735167, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding4" parent="." unique_id=540880517 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.523317, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding5" parent="." unique_id=1345022819 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.499905, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding6" parent="." unique_id=120971249 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.491264, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding7" parent="." unique_id=1683642274 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.47179, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding8" parent="." unique_id=527414829 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.40157, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding9" parent="." unique_id=1276065475 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.374397, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding10" parent="." unique_id=1634578587 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.363926, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding11" parent="." unique_id=145601464 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.34248, -0.7503202, 0.3708049)
+
+[node name="Platform_Scaffolding12" parent="." unique_id=1034889561 instance=ExtResource("15_7emau")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.32199, -0.7503202, 0.3708049)
+
 [editable path="ScreenFader"]
 [editable path="CameraStopArea2"]
 [editable path="Obstacle_SpineRolling"]
-[editable path="Obstacle_SpineRolling/Spine/barrel"]
+[editable path="Obstacle_SpineRolling/Spine/Gear"]
 [editable path="Obstacle_SpineRolling2"]
-[editable path="Obstacle_SpineRolling2/Spine/barrel"]
+[editable path="Obstacle_SpineRolling2/Spine/Gear"]
 [editable path="Obstacle_Kasih_Jalan"]
 [editable path="Obstacle_Base"]
 [editable path="Obstacle_Base/Obstacle_SpineRolling"]
-[editable path="Obstacle_Base/Obstacle_SpineRolling/Spine/barrel"]
+[editable path="Obstacle_Base/Obstacle_SpineRolling/Spine/Gear"]
