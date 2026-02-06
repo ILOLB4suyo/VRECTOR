@@ -51,10 +51,12 @@ func handle_game_over(player):
 	print("💀 GAME OVER - Player kena obstacle")
 	
 	Engine.time_scale = 1.0
-	player.can_move = false
+	
+	if player.has_method("die"):
+		player.die()
 	
 	if fail_sfx:
 		fail_sfx.play()
-		await fail_sfx.finished
 	
+	await get_tree().create_timer(0.7).timeout
 	get_tree().reload_current_scene()

@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var jump_velocity: float = 10.0
 
 @onready var jump_sfx: AudioStreamPlayer = $JumpSFX
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 var can_move := true
@@ -12,20 +13,22 @@ var is_climbing := false
 
 func force_jump():
 	velocity.y = jump_velocity
+	play_jump()
 
 func force_jump_extra(multiplier: float = 2.5):
 	velocity.y = jump_velocity * multiplier
 
 	if jump_sfx:
 		jump_sfx.play()
+	play_jump()
 
 
 func do_jump():
-	if is_on_floor():
+	if can_move and is_on_floor():
 		velocity.y = jump_velocity
-
 		if jump_sfx:
 			jump_sfx.play()
+		play_jump()
 
 func do_climb(target_height: float, duration: float = 2.5):
 	if is_climbing:
@@ -33,7 +36,8 @@ func do_climb(target_height: float, duration: float = 2.5):
 	
 	is_climbing = true
 	can_move = false
-	print("🧗 Player memanjat setinggi", target_height, "meter dalam", duration, "detik")
+	play_climb()
+	
 	
 	var start_y = global_position.y
 	var target_y = start_y + target_height
@@ -56,30 +60,31 @@ func do_climb(target_height: float, duration: float = 2.5):
 	
 	is_climbing = false
 	can_move = true
-	print("✓ Selesai memanjat!")
+	play_run()
 
 
 func _physics_process(delta: float) -> void:
-	# Auto-run ke kanan (sumbu X)
 	if is_climbing:
 		return
+
 	velocity.x = run_speed
 	velocity.z = 0.0
 
-	# Gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		# animasi jatuh
+		if velocity.y < 0 and animation_player.current_animation != "fall":
+			play_fall()
 	else:
 		if velocity.y < 0.0:
 			velocity.y = 0.0
-
-	# Jump
-	#if Input.is_action_just_pressed("jump") and is_on_floor():
-		#velocity.y = jump_velocity
-	
-	
+		# animasi lari
+		if animation_player.current_animation != "run":
+			play_run()
 
 	move_and_slide()
+
+	
 
 func apply_speed_boost(multiplier: float, duration: float):
 	run_speed *= multiplier
@@ -87,3 +92,28 @@ func apply_speed_boost(multiplier: float, duration: float):
 	await get_tree().create_timer(duration).timeout
 
 	run_speed /= multiplier
+
+func play_run():
+	if animation_player.current_animation != "run":
+		animation_player.play("run")
+
+func play_jump():
+	if animation_player.current_animation != "jump":
+		animation_player.play("jump")
+
+func play_fall():
+	if animation_player.current_animation != "fall":
+		animation_player.play("fall")
+
+func play_climb():
+	if animation_player.current_animation != "climb":
+		animation_player.play("climb")
+func die():
+	can_move = false
+	velocity = Vector3.ZERO
+	play_fall()
+	
+	# Hilangkan visual + collision
+	hide()
+	set_physics_process(false)
+	set_process(false)
