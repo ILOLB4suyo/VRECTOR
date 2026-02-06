@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b4alnyj007jv4" path="res://scripts/player.gd" id="1_si3wx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m430j"]
-radius = 0.6948242
+radius = 0.74609375
 height = 3.113872
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vviyk"]
@@ -330,7 +330,7 @@ bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 1.1641532e-10, 0, 1, 0, -1.1641532e-10, 0, 1, -1.6239937e-08, -1.1920929e-07, -2.226443e-09)
 bones/0/enabled = true
 bones/0/position = Vector3(-1.6239937e-08, -1.1920929e-07, -2.226443e-09)
-bones/0/rotation = Quaternion(0.0035747108, 0.05328715, 0.06512989, 0.9964466)
+bones/0/rotation = Quaternion(0.007390813, -0.033114463, -0.22661822, 0.97339255)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "Bone.001"
 bones/1/parent = 0
@@ -344,7 +344,7 @@ bones/2/parent = 1
 bones/2/rest = Transform3D(1, 0, 2.38535e-07, 0, 0.99999994, 0, -2.38535e-07, 0, 1, -1.6239937e-08, 0.8710576, -2.226443e-09)
 bones/2/enabled = true
 bones/2/position = Vector3(-1.6239937e-08, 0.8710576, -2.226443e-09)
-bones/2/rotation = Quaternion(-0.009985762, -0.05937523, 0.03685877, 0.99750507)
+bones/2/rotation = Quaternion(0.04515609, -0.09172771, -6.342364e-05, 0.9947598)
 bones/2/scale = Vector3(1, 0.99999994, 1)
 bones/3/name = "Bone.003"
 bones/3/parent = 2
@@ -365,7 +365,7 @@ bones/5/parent = 4
 bones/5/rest = Transform3D(1, 0, 1.1641532e-10, 0, 0.99999994, 0, -1.1641532e-10, 0, 1, -1.3911631e-08, 0.2816651, -3.5506673e-09)
 bones/5/enabled = true
 bones/5/position = Vector3(-1.3911631e-08, 0.2816651, -3.5506673e-09)
-bones/5/rotation = Quaternion(-0.0049424795, 0.0014458036, 0.034643333, 0.9993865)
+bones/5/rotation = Quaternion(0.00028511576, 5.569323e-09, 0.2030275, 0.979173)
 bones/5/scale = Vector3(1, 0.99999994, 1)
 bones/6/name = "Bone.006.R"
 bones/6/parent = 3
@@ -379,14 +379,14 @@ bones/7/parent = 6
 bones/7/rest = Transform3D(0.96845716, 0.09364675, -0.2309135, -0.24720314, 0.24457376, -0.9375896, -0.03132683, 0.9650978, 0.26000902, -1.4901161e-08, 1.24105, -1.17346644e-07)
 bones/7/enabled = true
 bones/7/position = Vector3(-1.4901161e-08, 1.24105, -1.17346644e-07)
-bones/7/rotation = Quaternion(0.23091194, -0.61547184, 0.75225514, 0.04456733)
+bones/7/rotation = Quaternion(0.60929424, -0.33307666, 0.24918035, 0.6750775)
 bones/7/scale = Vector3(1, 0.9999999, 1)
 bones/8/name = "Bone.008.L"
 bones/8/parent = 7
 bones/8/rest = Transform3D(0.99788, -0.060061544, 0.025057225, 0.06018162, 0.99817914, -0.004065346, -0.024767427, 0.0055647125, 0.9996778, -5.7742e-08, 1.46961, -1.0244548e-07)
 bones/8/enabled = true
 bones/8/position = Vector3(-5.7742e-08, 1.46961, -1.0244548e-07)
-bones/8/rotation = Quaternion(0.02212319, 0.014091189, 0.087300114, 0.99583673)
+bones/8/rotation = Quaternion(-0.08453706, 0.0154074095, -0.29283252, 0.9522947)
 bones/8/scale = Vector3(0.9999998, 1, 1)
 bones/9/name = "Bone.006.L"
 bones/9/parent = 3
@@ -400,14 +400,14 @@ bones/10/parent = 9
 bones/10/rest = Transform3D(0.29217, 0.94515294, -0.1460229, -0.20359458, 0.21065405, 0.95612454, 0.93444437, -0.24962139, 0.25397477, -3.9488077e-07, 1.2112724, -3.0733645e-08)
 bones/10/enabled = true
 bones/10/position = Vector3(-3.9488077e-07, 1.2112724, -3.0733645e-08)
-bones/10/rotation = Quaternion(-0.5990958, 0.517576, 0.50078416, 0.34987807)
+bones/10/rotation = Quaternion(-0.05458342, -0.6458413, -0.6614314, 0.37738362)
 bones/10/scale = Vector3(1.0000001, 1, 1)
 bones/11/name = "Bone.008.R"
 bones/11/parent = 10
 bones/11/rest = Transform3D(0.998434, 0.053953256, 0.014796169, -0.053838532, 0.99851716, -0.008046593, -0.01520837, 0.0072373846, 0.9998583, 2.9336661e-08, 1.4575782, 1.5739352e-07)
 bones/11/enabled = true
 bones/11/position = Vector3(2.9336661e-08, 1.4575782, 1.5739352e-07)
-bones/11/rotation = Quaternion(-0.024000729, 0.0073882174, 0.08419106, 0.99613315)
+bones/11/rotation = Quaternion(0.2151399, 0.011344543, -0.79092306, 0.57273644)
 bones/11/scale = Vector3(1.0000001, 0.99999994, 1.0000001)
 
 [node name="Cube" type="MeshInstance3D" parent="Armature/Skeleton3D" unique_id=894432497]

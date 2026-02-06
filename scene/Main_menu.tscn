@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bhmvrnc64clvi"]
 
 [ext_resource type="Script" uid="uid://cnmkic6iyicr7" path="res://scripts/main_menu.gd" id="1_j1gnl"]
-[ext_resource type="Texture2D" uid="uid://drpahn7imv30x" path="res://scene/backgroundgame.jpg" id="2_828d1"]
+[ext_resource type="VideoStream" uid="uid://bpcsqph2t6u8d" path="res://Assets/Video/MainMenuAnimationVid.ogv" id="2_828d1"]
 [ext_resource type="AudioStream" uid="uid://ckv8sgw2ccsdu" path="res://Assets/Music/sfx/achieve_goal.ogg" id="2_j1gnl"]
 [ext_resource type="AudioStream" uid="uid://cf1kw8b7vq051" path="res://Assets/Music/sfx/bgm_almost_timeup!.ogg" id="3_828d1"]
 
@@ -14,22 +14,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j1gnl")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=262724496]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=770213007]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(2.253293, 2.253293, 2.253293, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1171428648]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_828d1")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=770213007]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(2.253293, 2.253293, 2.253293, 1)
+stream = ExtResource("2_828d1")
+autoplay = true
+expand = true
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1208005231]
 layout_mode = 0

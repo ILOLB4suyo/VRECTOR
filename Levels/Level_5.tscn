@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bbpl6brbr7wg2" path="res://scene/ScreenFader.tscn" id="1_ymlwn"]
 [ext_resource type="PackedScene" uid="uid://dsg2y4i3584ua" path="res://scene/Player.tscn" id="2_rmgrl"]
-[ext_resource type="Script" uid="uid://b4alnyj007jv4" path="res://scripts/player.gd" id="3_ngdf5"]
 [ext_resource type="AudioStream" uid="uid://b518nilo4io3v" path="res://Assets/Music/sfx/jump..ogg" id="4_0fykt"]
 [ext_resource type="PackedScene" uid="uid://bh7w8v577cly0" path="res://scene/camera_rig.tscn" id="5_kgivn"]
 [ext_resource type="Script" uid="uid://b1aq20l1d1ftk" path="res://scripts/camera_rig.gd" id="6_7101h"]
@@ -15,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://osb6vn1qt7qi" path="res://scene/obstacle_panjat_tali.tscn" id="13_ngdf5"]
 [ext_resource type="PackedScene" uid="uid://bh8fyuc5iohmx" path="res://scene/Obstacle_kasih_jalan.tscn" id="14_0fykt"]
 [ext_resource type="PackedScene" uid="uid://d0r2ghibywle6" path="res://scene/Obstacle_Base.tscn" id="16_7101h"]
-[ext_resource type="PackedScene" uid="uid://cq0107l7cxgl5" path="res://scene/Platform_Scaffolding.tscn" id="16_w2j4p"]
+[ext_resource type="PackedScene" path="res://scene/Platform_Scaffolding.tscn" id="16_w2j4p"]
 [ext_resource type="PackedScene" uid="uid://c7pf8gyt8ef72" path="res://scene/takopi_rope.tscn" id="17_jiacp"]
 [ext_resource type="PackedScene" uid="uid://uwjstab2x00k" path="res://scene/Obstacle_SpineRolling.tscn" id="18_jiacp"]
 [ext_resource type="PackedScene" uid="uid://sl32apid3m8k" path="res://scene/gear_mini.tscn" id="19_vcatn"]
@@ -260,8 +259,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("2_rmgrl")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 15.631166, 0.15969515, 0.18135256)
-script = ExtResource("3_ngdf5")
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 12.992035, 2.2033787, 0.18135256)
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
 stream = ExtResource("4_0fykt")

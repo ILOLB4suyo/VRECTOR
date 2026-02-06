@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bbpl6brbr7wg2" path="res://scene/ScreenFader.tscn" id="1_xqub4"]
 [ext_resource type="PackedScene" uid="uid://dsg2y4i3584ua" path="res://scene/Player.tscn" id="2_7emau"]
-[ext_resource type="Script" uid="uid://b4alnyj007jv4" path="res://scripts/player.gd" id="3_a03si"]
 [ext_resource type="AudioStream" uid="uid://b518nilo4io3v" path="res://Assets/Music/sfx/jump..ogg" id="4_iwaoi"]
 [ext_resource type="PackedScene" uid="uid://bh7w8v577cly0" path="res://scene/camera_rig.tscn" id="5_psjp3"]
 [ext_resource type="Script" uid="uid://b1aq20l1d1ftk" path="res://scripts/camera_rig.gd" id="6_eoslg"]
@@ -14,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://uwjstab2x00k" path="res://scene/Obstacle_SpineRolling.tscn" id="13_ef48p"]
 [ext_resource type="PackedScene" uid="uid://ct0f1ow5n3xm2" path="res://scene/Obstacle_Speedboost.tscn" id="14_gqkj3"]
 [ext_resource type="Texture2D" uid="uid://drpahn7imv30x" path="res://scene/backgroundgame.jpg" id="14_xqub4"]
-[ext_resource type="PackedScene" uid="uid://cq0107l7cxgl5" path="res://scene/Platform_Scaffolding.tscn" id="15_7emau"]
+[ext_resource type="PackedScene" path="res://scene/Platform_Scaffolding.tscn" id="15_7emau"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
 albedo_color = Color(0.29954746, 0.29954746, 0.29954743, 1)
@@ -30,7 +29,7 @@ size = Vector3(1.7355347, 3.500183, 1.4462891)
 [sub_resource type="BoxShape3D" id="BoxShape3D_w48qg"]
 size = Vector3(1.2939453, 3.9180908, 1.5878906)
 
-[node name="Main" type="Node3D" unique_id=435557819]
+[node name="Main2" type="Node3D" unique_id=435557819]
 
 [node name="ScreenFader" parent="." unique_id=1277485170 instance=ExtResource("1_xqub4")]
 layer = 100
@@ -134,8 +133,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("2_7emau")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 19.846195, 2.1934972, -0.26981485)
-script = ExtResource("3_a03si")
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 25.175625, 2.1934972, -0.26981485)
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
 stream = ExtResource("4_iwaoi")
@@ -231,7 +229,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.281105, 0.5105952, 0.16991
 climb_height = 11
 
 [node name="CollisionShape3D" parent="Obstacle_Base/SlowmoArea" parent_id_path=PackedInt32Array(1519010700, 676845770) index="0" unique_id=692299938]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6049995, 0.83740234, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8055267, 0.83740234, 0)
 
 [node name="TypingPrompt" parent="Obstacle_Base" index="3" unique_id=94770377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0203018, 2.8508391, 0.15519238)

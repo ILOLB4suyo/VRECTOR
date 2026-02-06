@@ -96,9 +96,10 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("2_ti2hy")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 132.96796, 2.3683465, -0.066453695)
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 138.23279, 2.3683465, -0.066453695)
 collision_layer = 3
 collision_mask = 1
+script = null
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="Player" unique_id=1901826553]
 stream = ExtResource("4_upn1n")
@@ -175,9 +176,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0105501115, 1.0275092, -1.
 [node name="CollisionShape3D" parent="Obstacle_SpineRolling/Spine/KillArea" parent_id_path=PackedInt32Array(649545288, 1384377614) index="0" unique_id=339137129]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010208428, 0.40818024, -1.7202682)
 
-[node name="barrel_large" parent="Obstacle_SpineRolling/Spine/barrel" parent_id_path=PackedInt32Array(649545288, 2015879303) index="0" unique_id=1932309040]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0105501115, 0, -1.7778549)
-
 [node name="StartArea" parent="Obstacle_SpineRolling" index="2" unique_id=502481537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7252903e-09, 0, 9.199193)
 
@@ -245,8 +243,8 @@ texture = ExtResource("14_ex5s6")
 [editable path="CameraStopArea2"]
 [editable path="Obstacle_Jump_Biasa"]
 [editable path="Obstacle_SpineRolling"]
-[editable path="Obstacle_SpineRolling/Spine/barrel"]
+[editable path="Obstacle_SpineRolling/Spine/Gear"]
 [editable path="Obstacle_Speedboost"]
 [editable path="Obstacle_Manjat"]
 [editable path="Obstacle_SpineRolling2"]
-[editable path="Obstacle_SpineRolling2/Spine/barrel"]
+[editable path="Obstacle_SpineRolling2/Spine/Gear"]
