@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://b4alnyj007jv4" path="res://scripts/player.gd" id="1_si3wx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m430j"]
-radius = 0.74609375
-height = 3.113872
+radius = 0.83740234
+height = 3.6775415
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vviyk"]
 albedo_color = Color(0.75071174, 0.42990243, 0.34721765, 1)
