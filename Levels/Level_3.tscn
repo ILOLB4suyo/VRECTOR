@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://bwdjrogetrqul" path="res://LevelEndArea.gd" id="11_jdpeg"]
 [ext_resource type="PackedScene" uid="uid://bmmhtdvxvvmsr" path="res://scene/camera_stop_area.tscn" id="12_rhmms"]
 [ext_resource type="PackedScene" uid="uid://osb6vn1qt7qi" path="res://scene/obstacle_panjat_tali.tscn" id="13_46jcg"]
-[ext_resource type="PackedScene" path="res://scene/Obstacle_SpineRolling.tscn" id="13_y58m1"]
+[ext_resource type="PackedScene" uid="uid://uwjstab2x00k" path="res://scene/Obstacle_SpineRolling.tscn" id="13_y58m1"]
 [ext_resource type="PackedScene" uid="uid://ct0f1ow5n3xm2" path="res://scene/Obstacle_Speedboost.tscn" id="14_46jcg"]
 [ext_resource type="Texture2D" uid="uid://drpahn7imv30x" path="res://scene/backgroundgame.jpg" id="14_ex5s6"]
 
@@ -97,7 +97,7 @@ light_energy = 2.109
 
 [node name="Player" parent="." unique_id=1666612777 groups=["player"] instance=ExtResource("2_ti2hy")]
 unique_name_in_owner = true
-transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 132.96796, 0.38425303, 0.368999)
+transform = Transform3D(1.0014579, 0, 0, 0, 1.0014579, 0, 0, 0, 1.0014579, 12.7801895, 0.38425303, 0.368999)
 collision_layer = 3
 collision_mask = 1
 script = ExtResource("3_r4fpt")
@@ -177,7 +177,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0105501115, 1.0275092, -1.
 [node name="CollisionShape3D" parent="Obstacle_SpineRolling/Spine/KillArea" parent_id_path=PackedInt32Array(649545288, 1384377614) index="0" unique_id=339137129]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010208428, 0.40818024, -1.7202682)
 
-[node name="barrel_large" parent="Obstacle_SpineRolling/Spine/barrel" parent_id_path=PackedInt32Array(649545288, 2015879303) index="0" unique_id=1739816132]
+[node name="barrel_large" parent="Obstacle_SpineRolling/Spine/barrel" parent_id_path=PackedInt32Array(649545288, 2015879303) index="0" unique_id=1932309040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0105501115, 0, -1.7778549)
 
 [node name="StartArea" parent="Obstacle_SpineRolling" index="2" unique_id=502481537]

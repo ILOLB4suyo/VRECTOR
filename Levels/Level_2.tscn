@@ -26,7 +26,7 @@ background_color = Color(0.43476555, 0.5112999, 0.9320936, 1)
 ambient_light_color = Color(0.9682787, 0.53369856, 0.5930169, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycdy4"]
-size = Vector3(1.7355347, 3.500183, 1.4462891)
+size = Vector3(4.749115, 3.500183, 1.4462891)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w48qg"]
 size = Vector3(1.2939453, 3.9180908, 1.5878906)
@@ -103,7 +103,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.989746, 5.854616, 0)
 script = ExtResource("11_0rx21")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraStopArea" unique_id=309936664]
-transform = Transform3D(0.4391008, 0, 0, 0, 1, 0, 0, 0, 1, -7.5277557, -3.7253957, 0.22314453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.189392, -3.7253957, 0.22314453)
 shape = SubResource("BoxShape3D_ycdy4")
 debug_color = Color(1, 0, 0, 0.41960785)
 
@@ -112,7 +112,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.996826, 5.880784, 0)
 script = ExtResource("8_f8p00")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelEndArea" unique_id=1941818810]
-transform = Transform3D(0.4391008, 0, 0, 0, 1, 0, 0, 0, 1, 1.2528915, -3.5442915, 0.2939453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2528915, -3.5442915, 0.2939453)
 shape = SubResource("BoxShape3D_w48qg")
 debug_color = Color(1, 0.14901961, 0, 0.41960785)
 

@@ -29,7 +29,7 @@ size = Vector3(1.7355347, 3.500183, 1.4462891)
 [sub_resource type="BoxShape3D" id="BoxShape3D_w48qg"]
 size = Vector3(1.2939453, 3.9180908, 1.5878906)
 
-[node name="Main" type="Node3D" unique_id=435557819]
+[node name="Main3" type="Node3D" unique_id=435557819]
 
 [node name="ScreenFader" parent="." unique_id=1277485170 instance=ExtResource("1_xqub4")]
 layer = 100
@@ -252,7 +252,7 @@ height = 9.510223
 sides = 15
 
 [node name="Obstacle_SpineRolling" parent="Obstacle_Base" unique_id=1909934422 instance=ExtResource("13_ef48p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.478645, -0.27460325, -0.23180926)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.016167, -0.27460325, -0.23180926)
 roll_direction = -1
 
 [node name="StartArea" parent="Obstacle_Base/Obstacle_SpineRolling" index="2" unique_id=502481537]
